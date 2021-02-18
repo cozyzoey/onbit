@@ -1,0 +1,87 @@
+:root {
+	--primary: #a67265;
+	--primary-2: #f7c3ad;
+	--primary-3: #dbc9c5;
+
+	--secondary: #323c59;
+	--secondary-2: #5569a6;
+
+	--light: #ffffff;
+	--dark: #3d4744;
+	--grey: #f2f2f2;
+	--grey-2: #989d9b;
+	--grey-3: #686f6d;
+
+	--info: #0db1f3;
+	--success: #00cdb2;
+	--warning: #ffc157;
+	--error: #ff6c86;
+
+	--font-basic: 'Noto Sans KR', Helvetica, Arial, sans-serif;
+	--font-special: 'East Sea Dokdo', cursive;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	width: 100%;
+	font-size: 62.5%;
+	box-sizing: inherit;
+	@include respond($bp8) {
+		font-size: 56.25%;
+	}
+	@include respond($bp5) {
+		font-size: 50%;
+	}
+}
+
+body {
+	width: 100%;
+	font-family: var(--font-basic);
+	font-weight: 300;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	color: var(--dark);
+}
+
+.app {
+	width: 100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+	position: relative;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr auto;
+	grid-template-areas:
+		'main'
+		'footer';
+
+	a:link,
+	a:visited,
+	a:hover,
+	a:active {
+		text-decoration: none;
+	}
+
+	.page__heading {
+		z-index: 10;
+		position: absolute;
+		top: 14rem;
+		left: 10vw;
+		letter-spacing: 0.3rem;
+	}
+
+	main {
+		grid-area: main;
+		display: grid;
+		grid-template-columns: [full-start] 1fr [center-start] minmax(0, 120rem) [center-end] 1fr [full-end];
+	}
+	footer {
+		grid-area: footer;
+	}
+}

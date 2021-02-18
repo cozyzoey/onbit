@@ -1,0 +1,56 @@
+@import '../../styles/mixins';
+
+.alert {
+	z-index: 300;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1.2rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	animation: fadeInOut 2.8s linear;
+	color: var(--light);
+	font-weight: 500;
+
+	&__icon {
+		width: 2rem;
+		margin-right: 0.8rem;
+	}
+}
+
+.alert.success {
+	background-color: var(--success);
+}
+
+.alert.info {
+	background-color: var(--info);
+}
+
+.alert.warning {
+	background-color: var(--warning);
+}
+
+.alert.error {
+	background-color: var(--error);
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

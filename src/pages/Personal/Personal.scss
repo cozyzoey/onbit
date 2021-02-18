@@ -1,0 +1,41 @@
+@import '../../styles//mixins';
+.personal {
+	grid-column: center-start / center-end;
+	padding: 14vh 2vw 11vh;
+	@include animation(fadeIn, 1s, ease-in-out);
+
+	& > section {
+		padding-top: 6rem;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		position: relative;
+		@include respond($bp5) {
+			align-items: flex-start;
+		}
+		@include respond($bp7) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__desc {
+		margin-right: 4rem;
+		& > p {
+			width: 100%;
+			max-width: 40rem;
+			margin-bottom: 2vh;
+		}
+		@include respond($bp7) {
+			margin-right: 0;
+			margin-bottom: 3vh;
+		}
+	}
+
+	&__img {
+		max-width: 30rem;
+		img {
+			object-fit: cover;
+		}
+	}
+}

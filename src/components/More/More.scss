@@ -1,0 +1,25 @@
+.more {
+	font-weight: 500;
+	letter-spacing: 1px;
+	position: relative;
+
+	&--deco {
+		font-weight: 700;
+		display: inline-block;
+		position: absolute;
+		right: -30%;
+		color: var(--primary-2);
+		transition: all 0.2s ease-in-out;
+	}
+
+	&:hover .more--deco {
+		right: -36%;
+	}
+
+	&.primary {
+		color: var(--primary);
+	}
+	&.light {
+		color: var(--light);
+	}
+}

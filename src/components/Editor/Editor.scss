@@ -1,0 +1,78 @@
+@import '../../styles/mixins';
+
+.editor {
+	position: relative;
+
+	input[name='title'] {
+		@include basicInputStyle();
+		margin-top: 3vh;
+		font-size: 2rem;
+		padding: 0.8rem 0;
+		color: var(--secondary);
+		font-weight: 400;
+		&::placeholder,
+		&::-webkit-input-placeholder,
+		&::-ms-input-placeholder {
+			font-size: 2rem;
+		}
+	}
+
+	&__hr {
+		margin: 1.2rem 0;
+		border: none;
+		border-bottom: 1px solid var(--grey);
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 0.4rem;
+
+		label {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-left: 2rem;
+			font-weight: 400;
+			color: var(--primary);
+			cursor: pointer;
+		}
+		input[type='checkbox'] {
+			margin-right: 1rem;
+			position: absolute;
+			left: -2rem;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__btns {
+			& > *:not(:last-child) {
+				margin-right: 1rem;
+			}
+		}
+	}
+}
+
+.quill {
+	.ql-toolbar,
+	.ql-container {
+		border: none;
+		padding: 0;
+	}
+	.ql-toolbar {
+		position: absolute;
+		top: 0;
+		transform: translateY(-100%);
+	}
+	.ql-container {
+	}
+	.ql-editor {
+		font-family: var(--basic-fonts);
+		line-height: 1.6;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: var(--dark);
+		min-height: 20vh;
+		padding: 0.8rem 0;
+	}
+}

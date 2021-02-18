@@ -1,0 +1,33 @@
+.edge-btn {
+	outline: none;
+	border: 1px solid var(--grey-3);
+	font-weight: 500;
+	background: var(--light);
+	letter-spacing: 2px;
+	padding: 1rem 4rem;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+	&:hover,
+	&:active {
+		color: var(--light);
+		background-color: var(--secondary);
+	}
+	&:focus {
+		color: var(--secondary);
+		background-color: var(--light);
+	}
+
+	&.primary {
+		color: var(--primary);
+		border: 1px solid var(--primary);
+		&:hover,
+		&:active {
+			background-color: var(--primary);
+			color: var(--light);
+		}
+		&:focus {
+			background-color: var(--light);
+			color: var(--primary);
+		}
+	}
+}
