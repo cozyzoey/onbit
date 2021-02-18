@@ -34,6 +34,8 @@
 
 이전 프로젝트(하랑 홈페이지)에서 이미지 최적화, Code Splitting 등으로 성능을 개선했던 것을 동일하게 적용했습니다. 랜딩 페이지 기준 Lighthouse 결과는 아래와 같습니다.
 
+![온빛 랜딩 페이지 Lighthouse 결과](https://github.com/cozyzoey/images/blob/master/onbit-lighthouse.png)
+
 #### 테스트
 
 Firebase에서 제공하는 로컬 테스트 환경인 emulators를 활용하여 개발 및 테스트를 진행했습니다.

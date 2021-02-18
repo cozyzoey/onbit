@@ -12,6 +12,7 @@ function Email() {
 	const [content, setContent] = useState('')
 	const [emailSent, setEmailSent] = useState(false)
 	const [emailFail, setEmailFail] = useState(false)
+	const [emailLoading, setEmailLoading] = useState(false)
 
 	useEffect(() => {
 		if (emailSent) {
@@ -20,12 +21,12 @@ function Email() {
 			setContent('')
 			setEmail('')
 
-			const timer = setTimeout(() => setEmailSent(false), 2400)
+			const timer = setTimeout(() => setEmailSent(false), 3000)
 			return () => {
 				clearTimeout(timer)
 			}
 		} else if (emailFail) {
-			const timer = setTimeout(() => setEmailFail(false), 2400)
+			const timer = setTimeout(() => setEmailFail(false), 3000)
 			return () => {
 				clearTimeout(timer)
 			}
@@ -54,9 +55,14 @@ function Email() {
 	const onEmailSubmit = (e) => {
 		e.preventDefault()
 		// === send email to firebase function
+		setEmailLoading(true)
+		const uri =
+			window.location.hostname === 'localhost'
+				? 'http://localhost:5001/onbitclinic/asia-northeast2/app/api/email'
+				: 'https://asia-northeast2-onbitclinic.cloudfunctions.net/app/api/email'
 		axios
 			.post(
-				'http://localhost:5001/onbitclinic/asia-northeast2/app/api/email',
+				uri,
 				{
 					email,
 					name,
@@ -65,8 +71,14 @@ function Email() {
 				},
 				{ crossdomain: true }
 			)
-			.then((response) => setEmailSent(true))
-			.catch((error) => setEmailFail(true))
+			.then((response) => {
+				setEmailLoading(false)
+				setEmailSent(true)
+			})
+			.catch((error) => {
+				setEmailLoading(false)
+				setEmailFail(true)
+			})
 	}
 
 	return (
@@ -115,7 +127,9 @@ function Email() {
 				onKeyUp={resizeTextarea}
 			/>
 			<div className='email__btn'>
-				<EdgeBtn type='submit'>보내기</EdgeBtn>
+				<EdgeBtn type='submit' disabled={emailLoading}>
+					{emailLoading ? 'Sending...' : '보내기'}
+				</EdgeBtn>
 			</div>
 		</form>
 	)

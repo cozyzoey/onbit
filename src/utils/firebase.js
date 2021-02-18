@@ -1,5 +1,5 @@
 import firebase from 'firebase/app'
-//import 'firebase/analytics'
+import 'firebase/analytics'
 import 'firebase/auth'
 import 'firebase/firestore'
 import 'firebase/functions'
@@ -25,7 +25,7 @@ const firebaseConfig = {
 }
 
 firebase.initializeApp(firebaseConfig)
-//firebase.analytics()
+firebase.analytics()
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
 
 const db = firebase.firestore()

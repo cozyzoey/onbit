@@ -41,7 +41,7 @@ app.post('/api/email', (req, res) => {
 			<div style="color: #3d4744;">
 				<p>${content.replace(/\n\r?/g, '<br />')}</p>
 				<br />
-				<div style="border-top: 1px solid #989d9b; border-bottom: 1px solid #989d9b; width: max-content; padding: 6px 0;">
+				<div style="border-top: 1px solid #DFE4E3; width: max-content; padding-top: 6px;">
 					<p>성&nbsp;&nbsp;함: ${name}</p>
 					<p>연락처: ${phone}</p>
 					<p>이메일: ${email}</p>

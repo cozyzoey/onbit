@@ -1,14 +1,12 @@
+import './Notices.scss'
 import React, { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { User, Eye, Calendar } from 'react-feather'
 import { nanoid } from 'nanoid'
 import { ChevronsRight } from 'react-feather'
-import BasicBtn from '../../components/BasicBtn'
 import SectionHeading from '../../components/SectionHeading'
 import { fetchNotices } from '../../actions/noticeActions'
-import history from '../../utils/history'
-import './Notices.scss'
 
 function Notices({ match }) {
 	const [total, setTotal] = useState(0)

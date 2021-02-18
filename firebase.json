@@ -17,9 +17,18 @@
     "source": "functions"
   },
   "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [ {
       "source": "**",
       "function": "app"
+    }, {
+      "source": "**",
+      "destination": "/index.html"
     } ]
   }
 }

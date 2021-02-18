@@ -67,7 +67,7 @@ function Home() {
 						</Fade>
 					</section>
 					<div className='home__btns'>
-						<More to='/values' variant='light'>
+						<More to='/features' variant='light'>
 							진료가치
 						</More>
 						<More to='/treatment' variant='light'>

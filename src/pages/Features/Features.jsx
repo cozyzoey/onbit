@@ -32,13 +32,10 @@ function Features() {
 				style(sunlight.src640)
 			} else if (window.screen.width < 1280) {
 				style(sunlight.src1280)
-				console.log('1280')
 			} else if (window.screen.width < 1920) {
 				style(sunlight.src1920)
-				console.log('1920')
 			} else {
 				style(sunlight.src1920)
-				console.log('1920')
 			}
 		}
 
