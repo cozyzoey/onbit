@@ -3,7 +3,6 @@
 .interior {
 	grid-column: full-start / full-end;
 	padding: 14vh 2vw 0;
-	@include animation(fadeIn, 1s, ease-in-out);
 
 	&--box {
 		display: flex;
@@ -39,6 +38,10 @@
 	&__img {
 		height: 64vw;
 		max-height: 40rem;
+		@include animation(fadeIn, 1.2s, ease-in);
+		img {
+			object-fit: cover;
+		}
 	}
 
 	&__desc {

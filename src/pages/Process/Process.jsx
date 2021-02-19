@@ -15,11 +15,11 @@ function Process() {
 		if (scroll > height * 1.5 && scroll < height * 2.5) setActiveStep(3)
 		if (scroll > height * 2.5 && scroll < height * 3.5) setActiveStep(4)
 		if (scroll > height * 3.5 && scroll < height * 4.5) setActiveStep(5)
-		// if (scroll > height * 4.5 && scroll < height * 5.5) setActiveStep(6)
 	}
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '진료과정 – 온빛정신건강의학과의원'
 
 		if (window.innerWidth < 640) {
 			setImgSrc(forest.src640)

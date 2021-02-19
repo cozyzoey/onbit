@@ -7,6 +7,7 @@ import './Staff.scss'
 function Staff() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '의료진소개 – 온빛정신건강의학과의원'
 	}, [])
 
 	return (
@@ -21,15 +22,15 @@ function Staff() {
 							src={profile.jpg}
 							alt={profile.alt}
 							width='100%'
-							height='auto'
+							height='100%'
 						/>
 					</picture>
 				</div>
 				<div className='staff__desc'>
-					<Fade right cascade delay={500}>
+					<Fade right cascade delay={1200}>
 						<h3>박노연 대표원장</h3>
 					</Fade>
-					<Fade bottom cascade delay={1000}>
+					<Fade bottom cascade delay={2000}>
 						<ul>
 							<li>정신건강의학과 전문의</li>
 							<li>서울대학교병원 인턴, 전공의 수련</li>

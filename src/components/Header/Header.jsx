@@ -83,7 +83,7 @@ function Header() {
 					<button className='header__dropdown__btn'>진료안내</button>
 					<div className='header__dropdown__contents'>
 						<NavLink to='/treatment'>진료과목</NavLink>
-						<NavLink to='/process'>진료과정/비용</NavLink>
+						<NavLink to='/process'>진료과정</NavLink>
 						<NavLink to='/personal-therapy'>개인정신치료</NavLink>
 						<NavLink to='/group-therapy'>그룹정신치료</NavLink>
 					</div>
@@ -144,7 +144,7 @@ function Header() {
 									<NavLink to='/treatment'>진료과목</NavLink>
 								</li>
 								<li>
-									<NavLink to='/process'>진료과정/비용</NavLink>
+									<NavLink to='/process'>진료과정</NavLink>
 								</li>
 								<li>
 									<NavLink to='/personal-therapy'>개인정신치료</NavLink>

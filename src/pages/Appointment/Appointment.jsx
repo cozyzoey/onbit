@@ -10,6 +10,7 @@ function Appointment() {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '예약문의 – 온빛정신건강의학과의원'
 	}, [])
 
 	const onEmailClick = () => {
@@ -70,8 +71,7 @@ function Appointment() {
 							<Phone size={18} /> 02-522-9730
 						</span>
 						<span>
-							<MessageCircle size={18} /> <span>카카오톡ID 온빛클리닉 /</span>
-							&nbsp;<span>홈페이지 채널톡</span>
+							<MessageCircle size={18} /> 홈페이지 우측 하단 채널톡
 						</span>
 						<span>
 							<Mail size={18} /> onbitclinic@gmail.com

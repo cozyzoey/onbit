@@ -2,9 +2,9 @@
 
 .process {
 	grid-column: full-start / full-end;
-	@include animation(fadeIn, 1.2s, ease-in);
 
 	&__chart {
+		@include animation(fadeIn, 1.2s, ease-in);
 		width: 100%;
 		height: calc(14rem + 20vmin);
 		background-position: center center;
@@ -120,8 +120,10 @@
 			top: 0;
 			left: 50%;
 			transform: translateX(-50%) translateY(6rem);
+			font-weight: 400;
+			font-size: 1.7rem;
 			& > h2 {
-				font-size: 2.2rem;
+				font-size: 2.4rem;
 				margin-bottom: 4vh;
 				color: var(--primary);
 				letter-spacing: 0.4rem;

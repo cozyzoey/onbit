@@ -3,7 +3,6 @@
 .staff {
 	grid-column: center-start / center-end;
 	padding: 14vh 2vw;
-	@include animation(fadeIn, 0.8s, linear);
 
 	& > section {
 		padding-top: 8vh;
@@ -20,13 +19,18 @@
 	}
 
 	&__img {
+		@include animation(fadeIn, 1.2s, ease-in);
 		transform: translateY(6rem);
 		margin-right: 10vw;
+
 		@include respond($bp5) {
 			transform: translateY(0);
 			margin: 0 0 6rem 0;
 			width: 80vmin;
 			height: 80vmin;
+			img {
+				object-fit: cover;
+			}
 		}
 	}
 
@@ -37,6 +41,7 @@
 		}
 		& > ul {
 			width: max-content;
+			font-size: 1.7rem;
 		}
 		@include respond($bp5) {
 			margin-left: 4rem;

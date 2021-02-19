@@ -3,7 +3,6 @@
 .group {
 	grid-column: center-start / center-end;
 	padding: 14vh 2vw 11vh;
-	@include animation(fadeIn, 1s, ease-in-out);
 
 	& > section {
 		width: 100%;
@@ -18,6 +17,7 @@
 	}
 
 	&__img {
+		@include animation(fadeIn, 1.2s, ease-in);
 		img {
 			max-width: 60rem;
 			min-height: 40vmin;

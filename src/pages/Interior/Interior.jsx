@@ -9,6 +9,8 @@ function Interior() {
 	const elRef = useRef()
 
 	useEffect(() => {
+		document.title = '공간소개 – 온빛정신건강의학과의원'
+
 		const onWheel = (e) => {
 			elRef.current.scrollLeft += e.deltaY
 		}

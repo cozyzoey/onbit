@@ -7,14 +7,15 @@ import { personal } from '../../assets'
 function Personal() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '개인정신치료 – 온빛정신건강의학과의원'
 	}, [])
 
 	return (
 		<article className='personal'>
 			<section>
 				<SectionHeading>개인정신치료</SectionHeading>
-				<Fade bottom cascade delay={1000} duration={1400}>
-					<div className='personal__desc'>
+				<div className='personal__desc'>
+					<Fade bottom cascade delay={1200}>
 						<p>
 							치료자와 1:1로 회기당 45분, 주 1-3회씩 면담치료가 이루어집니다.
 						</p>
@@ -29,8 +30,8 @@ function Personal() {
 							사람에 대한 경계심이 많거나 어울리기 어려운 환자들도 진행
 							가능합니다.
 						</p>
-					</div>
-				</Fade>
+					</Fade>
+				</div>
 				<div className='personal__img'>
 					<picture>
 						<source type='image/webp' srcSet={personal.webp} />

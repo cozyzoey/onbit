@@ -7,6 +7,7 @@ import './Treatment.scss'
 function Treatment() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '진료과목 – 온빛정신건강의학과의원'
 	}, [])
 
 	const renderImg = (img) => {

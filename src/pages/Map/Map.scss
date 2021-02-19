@@ -3,7 +3,6 @@
 .map {
 	grid-column: center-start / center-end;
 	padding: 14vh 2vw 11vh;
-	@include animation(fadeIn, 1s, ease-in-out);
 
 	& > section {
 		position: relative;
@@ -44,6 +43,7 @@
 			}
 		}
 		&__map {
+			@include animation(fadeIn, 1.2s, ease-in);
 			width: 100%;
 			height: 54vmin;
 		}
@@ -67,6 +67,7 @@
 		}
 
 		&__img {
+			@include animation(fadeIn, 1.2s, ease-in);
 			width: 100%;
 			max-width: 70rem;
 			padding-top: 4rem;

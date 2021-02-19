@@ -9,6 +9,7 @@ function Features() {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '온빛의특징 – 온빛정신건강의학과의원'
 
 		// === Style parallax depending on screen aspect ratio
 		const onResize = () => {

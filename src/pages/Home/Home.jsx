@@ -68,7 +68,7 @@ function Home() {
 					</section>
 					<div className='home__btns'>
 						<More to='/features' variant='light'>
-							진료가치
+							온빛의특징
 						</More>
 						<More to='/treatment' variant='light'>
 							진료과목

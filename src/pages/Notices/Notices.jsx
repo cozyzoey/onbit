@@ -18,6 +18,7 @@ function Notices({ match }) {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '공지사항 – 온빛정신건강의학과의원'
 
 		// === Check initial screen width
 		if (window.screen.width < 600) {

@@ -10,6 +10,7 @@
 		padding-top: 6rem;
 		& > h3 {
 			text-align: center;
+			padding: 0 0.6rem;
 			margin-bottom: 4rem;
 			font-weight: 400;
 			color: var(--primary);
@@ -23,7 +24,6 @@
 			max-width: 60rem;
 			color: var(--success);
 			font-weight: 400;
-			font-size: 1.5rem;
 			span {
 				display: inline-block;
 			}

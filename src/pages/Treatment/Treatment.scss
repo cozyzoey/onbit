@@ -2,13 +2,13 @@
 
 .treatment {
 	grid-column: center-start / center-end;
-	padding: 14vh 3vw 8vh;
-	@include animation(fadeIn, 0.8s, linear);
+	padding: 14vh 3vw 4vh;
+	@include animation(fadeIn, 1s, ease-in);
 
 	& > * {
 		width: 100%;
 		max-width: 100rem;
-		margin: 0 auto 12vh;
+		margin: 0 auto 10vh;
 	}
 
 	& > hr {
@@ -21,7 +21,7 @@
 		padding-top: 6rem;
 		p {
 			font-weight: 400;
-			margin-bottom: 2vh;
+			margin-bottom: 2rem;
 			color: var(--secondary);
 		}
 	}

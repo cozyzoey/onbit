@@ -2,9 +2,9 @@
 
 .home {
 	grid-column: full-start / full-end;
-	@include animation(fadeIn, 1.2s, ease-in);
 
 	&__parallax {
+		@include animation(fadeIn, 1.2s, ease-in);
 		perspective: 1px;
 		perspective-origin: top right;
 		height: 100vh;
@@ -83,12 +83,16 @@
 				}
 				div.home__btns {
 					scroll-snap-align: end;
-					height: 10vh;
+					height: 14vh;
 					display: flex;
 					justify-content: center;
 					align-items: flex-start;
 					& > a {
+						font-size: 1.8rem;
 						margin-right: 6rem;
+						@include respond($bp4) {
+							margin-right: 4rem;
+						}
 					}
 				}
 			}

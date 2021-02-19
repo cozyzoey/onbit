@@ -29,16 +29,18 @@ function Footer() {
 						<span>대표자</span> 박노연
 					</span>
 					<span>
-						<span>사업자등록번호</span> 11111111111
+						<span>사업자등록번호</span> 566-91-01642
 					</span>
 				</div>
 			</div>
 			<hr></hr>
 			<div className='footer--bottom'>
 				<span>
+					Copyright &copy; {new Date().getFullYear()} by 온빛정신건강의학과의원
+				</span>
+				<span>
 					<Link to='/policy'>개인정보 처리방침</Link>
 				</span>
-				<span>&copy; {new Date().getFullYear()} 온빛정신건강의학과의원</span>
 			</div>
 		</footer>
 	)

@@ -3,9 +3,9 @@
 .features {
 	grid-column: full-start / full-end;
 	padding: 8vh 0 0;
-	@include animation(fadeIn, 1s, ease-in);
 
 	&__parallax {
+		@include animation(fadeIn, 1.2s, ease-in);
 		height: 60vmin;
 		background-attachment: fixed;
 		background-repeat: no-repeat;

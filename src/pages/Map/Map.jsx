@@ -21,6 +21,9 @@ function Map() {
 	const addressRef = useRef()
 
 	useEffect(() => {
+		window.scrollTo(0, 0)
+		document.title = '오시는길 – 온빛정신건강의학과의원'
+
 		if (window.naver) {
 			setMapLoaded(true)
 		} else {
@@ -130,6 +133,7 @@ function Map() {
 										alt={parking.alt}
 										width='100%'
 										height='100%'
+										loading='lazy'
 									/>
 								</picture>
 							</div>

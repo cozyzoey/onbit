@@ -8,6 +8,7 @@ import './Group.scss'
 function Personal() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
+		document.title = '그룹정신치료 – 온빛정신건강의학과의원'
 	}, [])
 
 	return (
@@ -23,7 +24,7 @@ function Personal() {
 							<img src={group.jpg} alt={group.alt} width='100%' height='100%' />
 						</picture>
 					</div>
-					<Fade bottom cascade delay={1000}>
+					<Fade bottom cascade delay={1200} duration={1600}>
 						<div>
 							<p>
 								10명 내외의 치료자를 포함한 그룹원들과 회기당 90분, 주 1회씩
