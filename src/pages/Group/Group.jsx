@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { group } from '../../assets'
@@ -8,11 +9,18 @@ import './Group.scss'
 function Personal() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
-		document.title = '그룹정신치료 – 온빛정신건강의학과의원'
 	}, [])
 
 	return (
 		<article className='group'>
+			<Helmet>
+				<title>그룹정신치료 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='10명 내외의 치료자를 포함한 그룹원들과 회기당 90분, 주 1회씩 면담치료가 이루어집니다.'
+				/>
+				<meta name='robots' content='index, nofollow' />
+			</Helmet>
 			<section>
 				<SectionHeading>그룹정신치료</SectionHeading>
 

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { Phone, Mail, MessageCircle } from 'react-feather'
 import SectionHeading from '../../components/SectionHeading'
 import OfficeHours from '../../components/OfficeHours'
@@ -24,6 +25,14 @@ function Appointment() {
 
 	return (
 		<article className='appointment'>
+			<Helmet>
+				<title>예약문의 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='전화, 채팅상담, 이메일을 통해 문의 및 예약이 가능합니다.'
+				/>
+				<meta name='robots' content='noindex, nofollow' />
+			</Helmet>
 			<section>
 				<SectionHeading>예약문의</SectionHeading>
 				<h3>
@@ -83,7 +92,7 @@ function Appointment() {
 					</div>
 				</div>
 				<div className='appointment__email'>
-					<p>
+					<div>
 						<p>
 							<span>상담 내용을 메일로 보내주시면</span>&nbsp;
 							<span>확인후 연락드리겠습니다.</span>
@@ -92,7 +101,7 @@ function Appointment() {
 							<span>온빛의 대표 메일과 작성해주신 메일로</span>&nbsp;
 							<span>함께 송부됩니다.</span>
 						</p>
-					</p>
+					</div>
 					<div ref={emailRef}>
 						<Email />
 					</div>

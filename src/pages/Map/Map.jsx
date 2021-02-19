@@ -1,5 +1,6 @@
 import './Map.scss'
 import React, { useState, useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet'
 import { MapPin, Phone, Clock, Info } from 'react-feather'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -79,6 +80,14 @@ function Map() {
 
 	return (
 		<article className='map'>
+			<Helmet>
+				<title>오시는길 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='서울 서초구 효령료33길 45 301호, 방배역 4번 출구에 위치해 있습니다. 1시간 무료주차 가능합니다.'
+				/>
+				<meta name='robots' content='index, nofollow' />
+			</Helmet>
 			{addressCopied && <Alert variant='success'>주소를 복사했습니다</Alert>}
 			<section>
 				<SectionHeading>오시는길</SectionHeading>
@@ -87,7 +96,7 @@ function Map() {
 					<div className='map__header__address'>
 						<div>
 							<span>온빛정신건강의학과</span>
-							<h2 ref={addressRef}>서울 서초구 효령료33길 45</h2>
+							<h2 ref={addressRef}>서울 서초구 효령료33길 45 301호</h2>
 						</div>
 						<div className='map__header__actions'>
 							<BasicBtn onClick={onAddressCopy} variant='info'>

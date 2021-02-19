@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { sunlight, features } from '../../assets'
@@ -9,7 +10,6 @@ function Features() {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
-		document.title = '온빛의특징 – 온빛정신건강의학과의원'
 
 		// === Style parallax depending on screen aspect ratio
 		const onResize = () => {
@@ -70,6 +70,14 @@ function Features() {
 
 	return (
 		<article className='features'>
+			<Helmet>
+				<title>온빛의특징 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='면담 위주 진료. 적어도 주 1회씩 꾸준한 치료. 환자의 자율성 중시.'
+				/>
+				<meta name='robots' content='index, nofollow' />
+			</Helmet>
 			<div className='features__parallax' ref={parallaxRef}></div>
 			<div className='features__intro'>
 				<SectionHeading>온빛의 특징</SectionHeading>

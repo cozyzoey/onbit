@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { symptoms } from '../../assets'
@@ -7,7 +8,6 @@ import './Treatment.scss'
 function Treatment() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
-		document.title = '진료과목 – 온빛정신건강의학과의원'
 	}, [])
 
 	const renderImg = (img) => {
@@ -30,6 +30,14 @@ function Treatment() {
 
 	return (
 		<article className='treatment'>
+			<Helmet>
+				<title>진료과목 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='우울, 불안, 분노, 대인관계, 수면과 식이 장애, 완벽주의/술/마약/성관계/도박/게임 중독, 두통/복통/근육통/피로감 증상'
+				/>
+				<meta name='robots' content='index, nofollow' />
+			</Helmet>
 			<div className='treatment__intro'>
 				<p>
 					해결이 어려운 마음의 문제들은 많은 경우에 해결되지 않은 체 잊혀집니다.

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Helmet } from 'react-helmet'
 import parse from 'html-react-parser'
 import history from '../../utils/history'
 import { User, Eye, Calendar } from 'react-feather'
@@ -81,6 +82,14 @@ function Notice({ match, location }) {
 
 	return (
 		<div className='notice'>
+			<Helmet>
+				<title>공지사항 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='휴무일 안내, 병원소식 등 공지사항을 전합니다.'
+				/>
+				<meta name='robots' content='noindex, nofollow' />
+			</Helmet>
 			<section>
 				<SectionHeading>공지사항</SectionHeading>
 				{notice && renderNoticeBody()}

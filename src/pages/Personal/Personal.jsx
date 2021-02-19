@@ -1,5 +1,6 @@
 import './Personal.scss'
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { personal } from '../../assets'
@@ -7,11 +8,18 @@ import { personal } from '../../assets'
 function Personal() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
-		document.title = '개인정신치료 – 온빛정신건강의학과의원'
 	}, [])
 
 	return (
 		<article className='personal'>
+			<Helmet>
+				<title>개인정신치료 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='개인 면담치료는 1대 1로 회기당 45분, 주 1~3회씩 이루어집니다.'
+				/>
+				<meta name='robots' content='index, nofollow' />
+			</Helmet>
 			<section>
 				<SectionHeading>개인정신치료</SectionHeading>
 				<div className='personal__desc'>

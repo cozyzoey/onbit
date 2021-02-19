@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import More from '../../components/More'
 import { sunset } from '../../assets'
@@ -25,6 +26,14 @@ function Home() {
 
 	return (
 		<div className='home'>
+			<Helmet>
+				<title>온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='방배역에 위치한 온빛정신건강의학과의원입니다. 면담 위주로 진료합니다.'
+				/>
+				<meta name='robots' content='index, nofollow' />
+			</Helmet>
 			<article className='home__parallax'>
 				<div
 					className='home__parallax__layer home__parallax__layer--back'

@@ -1,5 +1,6 @@
 import './Notices.scss'
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import { Link, NavLink } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { User, Eye, Calendar } from 'react-feather'
@@ -18,7 +19,6 @@ function Notices({ match }) {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
-		document.title = '공지사항 – 온빛정신건강의학과의원'
 
 		// === Check initial screen width
 		if (window.screen.width < 600) {
@@ -196,6 +196,14 @@ function Notices({ match }) {
 
 	return (
 		<div className='notices'>
+			<Helmet>
+				<title>공지사항 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='휴무일 안내, 병원소식 등 공지사항을 전합니다.'
+				/>
+				<meta name='robots' content='noindex, nofollow' />
+			</Helmet>
 			<section>
 				<SectionHeading>공지사항</SectionHeading>
 				<div className='notices__table'>

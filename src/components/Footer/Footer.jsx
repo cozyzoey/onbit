@@ -23,7 +23,7 @@ function Footer() {
 						<Mail size={14} /> onbitclinic@gmail.com
 					</span>
 					<span title='주소'>
-						<MapPin size={14} /> 서울 서초구 효령료33길 45 3F
+						<MapPin size={14} /> 서울 서초구 효령료33길 45 301호
 					</span>
 					<span>
 						<span>대표자</span> 박노연

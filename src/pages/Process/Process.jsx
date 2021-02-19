@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { forest } from '../../assets'
 import './Process.scss'
 
@@ -19,7 +20,6 @@ function Process() {
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
-		document.title = '진료과정 – 온빛정신건강의학과의원'
 
 		if (window.innerWidth < 640) {
 			setImgSrc(forest.src640)
@@ -38,6 +38,14 @@ function Process() {
 
 	return (
 		<article className='process'>
+			<Helmet>
+				<title>진료과정 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='예약, 초기면담, 치료계획, 치료진행, 종결'
+				/>
+				<meta name='robots' content='noindex, nofollow' />
+			</Helmet>
 			<section
 				className='process__chart'
 				style={{ backgroundImage: `url(${imgSrc})` }}

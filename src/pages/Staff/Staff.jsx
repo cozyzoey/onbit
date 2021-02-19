@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { profile } from '../../assets'
@@ -7,11 +8,18 @@ import './Staff.scss'
 function Staff() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
-		document.title = '의료진소개 – 온빛정신건강의학과의원'
 	}, [])
 
 	return (
 		<article className='staff'>
+			<Helmet>
+				<title>의료진소개 &ndash; 온빛정신건강의학과의원</title>
+				<meta
+					name='description'
+					content='박노연 대표원장. 정신건강의학과 전문의. 서울대학교병원 전공의 수련.'
+				/>
+				<meta name='robots' content='index, nofollow' />
+			</Helmet>
 			<section>
 				<SectionHeading>의료진소개</SectionHeading>
 				<div className='staff__img'>

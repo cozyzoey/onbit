@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet'
 import { nanoid } from 'nanoid'
 import Fade from 'react-reveal/Fade'
 import { interiors } from '../../assets'
@@ -9,8 +10,6 @@ function Interior() {
 	const elRef = useRef()
 
 	useEffect(() => {
-		document.title = '공간소개 – 온빛정신건강의학과의원'
-
 		const onWheel = (e) => {
 			elRef.current.scrollLeft += e.deltaY
 		}
@@ -43,6 +42,11 @@ function Interior() {
 
 	return (
 		<div className='interior'>
+			<Helmet>
+				<title>공간소개 &ndash; 온빛정신건강의학과의원</title>
+				<meta name='description' content='입구. 대기 공간. 진료실.' />
+				<meta name='robots' content='noindex, nofollow' />
+			</Helmet>
 			<div className='interior--box' ref={elRef}>
 				{renderPhotos()}
 			</div>
