@@ -83,7 +83,7 @@ function Appointment() {
 							<MessageCircle size={18} /> 홈페이지 우측 하단 채널톡
 						</span>
 						<span>
-							<Mail size={18} /> onbitclinic@gmail.com
+							<Mail size={18} /> contact@onbitclinic.com
 						</span>
 					</div>
 					<div className='appointment__info__office-hours'>
@@ -92,7 +92,7 @@ function Appointment() {
 					</div>
 				</div>
 				<div className='appointment__email'>
-					<div>
+					<div className='appointment__email__reminder'>
 						<p>
 							<span>상담 내용을 메일로 보내주시면</span>&nbsp;
 							<span>확인후 연락드리겠습니다.</span>
@@ -102,7 +102,7 @@ function Appointment() {
 							<span>함께 송부됩니다.</span>
 						</p>
 					</div>
-					<div ref={emailRef}>
+					<div className='appointment__email__body' ref={emailRef}>
 						<Email />
 					</div>
 				</div>

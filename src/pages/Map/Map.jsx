@@ -84,7 +84,7 @@ function Map() {
 				<title>오시는길 &ndash; 온빛정신건강의학과의원</title>
 				<meta
 					name='description'
-					content='서울 서초구 효령료33길 45 301호, 방배역 4번 출구에 위치해 있습니다. 1시간 무료주차 가능합니다.'
+					content='서울 서초구 효령료33길 45 301호 (KH빌딩 3층), 방배역 4번 출구에 위치해 있습니다. 1시간 무료주차 가능합니다.'
 				/>
 				<meta name='robots' content='index, nofollow' />
 			</Helmet>
@@ -95,8 +95,11 @@ function Map() {
 					<div className='map__header__map' ref={mapRef}></div>
 					<div className='map__header__address'>
 						<div>
-							<span>온빛정신건강의학과</span>
-							<h2 ref={addressRef}>서울 서초구 효령료33길 45 301호</h2>
+							<p>온빛정신건강의학과</p>
+							<h2 ref={addressRef}>
+								<span>서울 서초구 효령료33길 45 301호</span>&nbsp;
+								<span>(KH빌딩 3층)</span>
+							</h2>
 						</div>
 						<div className='map__header__actions'>
 							<BasicBtn onClick={onAddressCopy} variant='info'>
@@ -119,7 +122,7 @@ function Map() {
 							<MapPin />
 							오시는길
 						</div>
-						<div>지하철 2호선 방배역 4번 출구에 있습니다</div>
+						<div>지하철 2호선 방배역 4번 출구에 있습니다.</div>
 					</div>
 					<div className='map__info--row'>
 						<div className='map__info__title'>
@@ -127,7 +130,7 @@ function Map() {
 							주차안내
 						</div>
 						<div>
-							건물 입구 옆 1시간 무료주차 가능합니다
+							건물 입구 옆 1시간 무료주차 가능합니다.
 							<div className='map__info__img'>
 								<picture>
 									<source

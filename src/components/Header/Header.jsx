@@ -173,10 +173,10 @@ function Header() {
 					<div className='header__navfull__contact'>
 						<div className='header__navfull__contact__reminder'>
 							<p>
-								<span>저희 의원에 예약없이 방문하실 경우</span>&nbsp;
+								<span>저희 의원에 예약 없이 방문하실 경우</span>&nbsp;
 								<span>대기시간이 길어지거나</span>
 							</p>
-							<p>진료에 어려움이 있을 수 있으니 예약후 방문 바랍니다.</p>
+							<p>진료에 어려움이 있을 수 있으니 예약 후 방문 바랍니다.</p>
 						</div>
 						<section>
 							<div className='header__navfull__contact__info'>

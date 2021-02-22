@@ -20,10 +20,10 @@ function Footer() {
 						<Printer size={14} /> 02-522-9731
 					</span>
 					<span title='이메일'>
-						<Mail size={14} /> onbitclinic@gmail.com
+						<Mail size={14} /> contact@onbitclinic.com
 					</span>
 					<span title='주소'>
-						<MapPin size={14} /> 서울 서초구 효령료33길 45 301호
+						<MapPin size={14} /> 서울 서초구 효령료33길 45 301호 (KH빌딩 3층)
 					</span>
 					<span>
 						<span>대표자</span> 박노연
@@ -38,7 +38,7 @@ function Footer() {
 				<span>
 					Copyright &copy; {new Date().getFullYear()} by 온빛정신건강의학과의원
 				</span>
-				<span>
+				<span className='footer--bottom__policy'>
 					<Link to='/policy'>개인정보 처리방침</Link>
 				</span>
 			</div>
