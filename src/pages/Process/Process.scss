@@ -4,8 +4,8 @@
 	grid-column: full-start / full-end;
 
 	&__chart {
-		@include animation(fadeIn, 1.2s, ease-in);
 		width: 100%;
+		transition: opacity 1.2s ease-in-out;
 		height: calc(14rem + 24vmin);
 		background-position: center center;
 		background-repeat: no-repeat;

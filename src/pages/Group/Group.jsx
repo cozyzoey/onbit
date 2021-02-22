@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
@@ -7,6 +7,8 @@ import { group } from '../../assets'
 import './Group.scss'
 
 function Personal() {
+	const [imgLoaded, setImgLoaded] = useState(false)
+
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
@@ -29,7 +31,14 @@ function Personal() {
 						<picture>
 							<source type='image/webp' srcSet={group.webp} />
 							<source type='image/jpeg' srcSet={group.jpg} />
-							<img src={group.jpg} alt={group.alt} width='100%' height='100%' />
+							<img
+								src={group.jpg}
+								alt={group.alt}
+								width='100%'
+								height='100%'
+								onLoad={() => setImgLoaded(true)}
+								style={{ opacity: imgLoaded ? 1 : 0 }}
+							/>
 						</picture>
 					</div>
 					<Fade bottom cascade delay={1200} duration={1600}>

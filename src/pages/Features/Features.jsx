@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
@@ -6,6 +6,7 @@ import { sunlight, features } from '../../assets'
 import './Features.scss'
 
 function Features() {
+	const [sourceLoaded, setSourceLoaded] = useState(null)
 	const parallaxRef = useRef()
 
 	useEffect(() => {
@@ -14,16 +15,18 @@ function Features() {
 		// === Style parallax depending on screen aspect ratio
 		const onResize = () => {
 			const styleSmall = (imgSrc) => {
-				parallaxRef.current.style.backgroundImage = `url(${imgSrc})`
 				parallaxRef.current.style.backgroundSize = '130vw auto'
 				parallaxRef.current.style.backgroundPosition = 'center top'
 			}
 			const styleWide = (imgSrc) => {
-				parallaxRef.current.style.backgroundImage = `url(${imgSrc})`
 				parallaxRef.current.style.backgroundSize = 'cover'
 				parallaxRef.current.style.backgroundPosition = 'center bottom'
 			}
 			const style = (imgSrc) => {
+				const img = new Image()
+				img.src = imgSrc
+				img.onload = () => setSourceLoaded(imgSrc)
+
 				window.screen.width < window.screen.height
 					? styleSmall(imgSrc)
 					: styleWide(imgSrc)
@@ -78,7 +81,14 @@ function Features() {
 				/>
 				<meta name='robots' content='index, nofollow' />
 			</Helmet>
-			<div className='features__parallax' ref={parallaxRef}></div>
+			<div
+				className='features__parallax'
+				ref={parallaxRef}
+				style={{
+					backgroundImage: `url(${sourceLoaded || ''})`,
+					opacity: sourceLoaded ? 1 : 0,
+				}}
+			></div>
 			<div className='features__intro'>
 				<SectionHeading>온빛의 특징</SectionHeading>
 				<Fade bottom cascade duration={2000} delay={1000}>

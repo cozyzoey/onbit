@@ -17,6 +17,7 @@ import { parking, parking_800w } from '../../assets'
 
 function Map() {
 	const [mapLoaded, setMapLoaded] = useState(false)
+	const [imgLoaded, setImgLoaded] = useState(false)
 	const [addressCopied, setAddressCopied] = useState(false)
 	const mapRef = useRef()
 	const addressRef = useRef()
@@ -92,7 +93,11 @@ function Map() {
 			<section>
 				<SectionHeading>오시는길</SectionHeading>
 				<div className='map__header'>
-					<div className='map__header__map' ref={mapRef}></div>
+					<div
+						className='map__header__map'
+						ref={mapRef}
+						style={{ opacity: mapLoaded ? 1 : 0 }}
+					></div>
 					<div className='map__header__address'>
 						<div>
 							<p>온빛정신건강의학과</p>
@@ -146,6 +151,8 @@ function Map() {
 										width='100%'
 										height='100%'
 										loading='lazy'
+										onLoad={() => setImgLoaded(true)}
+										style={{ opacity: imgLoaded ? 1 : 0 }}
 									/>
 								</picture>
 							</div>

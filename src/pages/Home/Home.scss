@@ -4,7 +4,6 @@
 	grid-column: full-start / full-end;
 
 	&__parallax {
-		@include animation(fadeIn, 1.2s, ease-in);
 		perspective: 1px;
 		perspective-origin: top right;
 		height: 100vh;
@@ -33,6 +32,7 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				height: 108vh;
+				transition: opacity 1.2s ease-in-out;
 			}
 			&--base {
 				transform: translateZ(0);

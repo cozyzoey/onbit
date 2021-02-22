@@ -10,6 +10,7 @@ import './styles/styles.scss'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Loader from './components/Loader'
 
 const Home = lazy(() => import('./pages/Home'))
 const Login = lazy(() => import('./pages/Login'))
@@ -76,7 +77,7 @@ function App() {
 			<Router history={history}>
 				<Header />
 				<main>
-					<Suspense fallback=''>
+					<Suspense fallback={<Loader />}>
 						<Switch>
 							<Route path='/' component={Home} exact />
 							<Route path='/login' component={Login} />

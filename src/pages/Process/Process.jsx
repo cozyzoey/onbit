@@ -4,7 +4,7 @@ import { forest } from '../../assets'
 import './Process.scss'
 
 function Process() {
-	const [imgSrc, setImgSrc] = useState('')
+	const [sourceLoaded, setSourceLoaded] = useState('')
 	const [activeStep, setActiveStep] = useState(1)
 
 	const onScroll = () => {
@@ -21,12 +21,16 @@ function Process() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
 
+		const img = new Image()
 		if (window.innerWidth < 640) {
-			setImgSrc(forest.src640)
+			img.src = forest.src640
+			img.onload = () => setSourceLoaded(forest.src640)
 		} else if (window.innerWidth < 1280) {
-			setImgSrc(forest.src1280)
+			img.src = forest.src1280
+			img.onload = () => setSourceLoaded(forest.src1280)
 		} else {
-			setImgSrc(forest.src1920)
+			img.src = forest.src1920
+			img.onload = () => setSourceLoaded(forest.src1920)
 		}
 
 		window.addEventListener('scroll', onScroll, { passive: true })
@@ -48,7 +52,10 @@ function Process() {
 			</Helmet>
 			<section
 				className='process__chart'
-				style={{ backgroundImage: `url(${imgSrc})` }}
+				style={{
+					backgroundImage: `url(${sourceLoaded || ''})`,
+					opacity: sourceLoaded ? 1 : 0,
+				}}
 			>
 				<ul>
 					<li

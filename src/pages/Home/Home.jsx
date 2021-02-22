@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import More from '../../components/More'
@@ -6,14 +6,16 @@ import { sunset } from '../../assets'
 import './Home.scss'
 
 function Home() {
-	const parallaxRef = useRef()
+	const [sourceLoaded, setSourceLoaded] = useState(null)
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
 
 		// === Give different parallax img depending on screen size
 		const style = (imgSrc) => {
-			parallaxRef.current.style.backgroundImage = `url(${imgSrc})`
+			const img = new Image()
+			img.src = imgSrc
+			img.onload = () => setSourceLoaded(imgSrc)
 		}
 		if (window.screen.height * 1.08 < 720) {
 			style(sunset.src1280)
@@ -37,7 +39,10 @@ function Home() {
 			<article className='home__parallax'>
 				<div
 					className='home__parallax__layer home__parallax__layer--back'
-					ref={parallaxRef}
+					style={{
+						backgroundImage: `url(${sourceLoaded || ''})`,
+						opacity: sourceLoaded ? 1 : 0,
+					}}
 				></div>
 				<div className='home__parallax__layer home__parallax__layer--base'>
 					<section>

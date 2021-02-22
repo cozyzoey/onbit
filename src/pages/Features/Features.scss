@@ -5,10 +5,10 @@
 	padding: 8vh 0 0;
 
 	&__parallax {
-		@include animation(fadeIn, 1.2s, ease-in);
 		height: 60vmin;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		transition: opacity 1.2s ease-in-out;
 	}
 
 	&__intro {

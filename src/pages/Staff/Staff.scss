@@ -1,6 +1,7 @@
 @import '../../styles/mixins';
 
 .staff {
+	@include animation(fadeIn, 1.6s, ease-in);
 	grid-column: center-start / center-end;
 	padding: 14vh 2vw;
 
@@ -13,24 +14,26 @@
 		li {
 			list-style-type: none;
 		}
-		@include respond($bp5) {
+		@include respond($bp8) {
 			flex-direction: column;
 		}
 	}
 
 	&__img {
-		@include animation(fadeIn, 1.2s, ease-in);
+		flex: 0 0 auto;
 		transform: translateY(6rem);
 		margin-right: 10vw;
-
-		@include respond($bp5) {
+		width: 400px;
+		height: auto;
+		img {
+			object-fit: cover;
+			transition: all 1s ease-in-out;
+		}
+		@include respond($bp8) {
 			transform: translateY(0);
 			margin: 0 0 6rem 0;
 			width: 80vmin;
-			height: 80vmin;
-			img {
-				object-fit: cover;
-			}
+			height: auto;
 		}
 	}
 

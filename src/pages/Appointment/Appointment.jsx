@@ -44,7 +44,7 @@ function Appointment() {
 						<button
 							onClick={() => document.getElementById('phone-call').click()}
 						>
-							<a href='tel:+82-2-522-9730' id='phone-call'>
+							<a href='tel:02-522-9730' id='phone-call'>
 								<Phone size={36} />
 							</a>
 						</button>

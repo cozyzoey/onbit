@@ -1,13 +1,15 @@
 @import '../../styles//mixins';
+
 .personal {
+	@include animation(fadeIn, 1.6s, ease-in);
 	grid-column: center-start / center-end;
-	padding: 14vh 2vw 11vh;
+	padding: 14vh 4vw 11vh;
 
 	& > section {
 		padding-top: 6rem;
 		display: flex;
 		align-items: flex-end;
-		justify-content: center;
+		justify-content: space-evenly;
 		position: relative;
 		@include respond($bp5) {
 			align-items: flex-start;
@@ -33,9 +35,15 @@
 
 	&__img {
 		@include animation(fadeIn, 1.2s, ease-in);
-		max-width: 30rem;
+		width: 40vmin;
+		height: 48vmin;
 		img {
 			object-fit: cover;
+			transition: all 1s ease-in-out;
+		}
+		@include respond($bp6) {
+			width: 80vw;
+			height: 96vw;
 		}
 	}
 }

@@ -1,8 +1,9 @@
 @import '../../styles/mixins';
 
 .group {
+	@include animation(fadeIn, 1.6s, ease-in);
 	grid-column: center-start / center-end;
-	padding: 14vh 2vw 11vh;
+	padding: 14vh 4vw 11vh;
 
 	& > section {
 		width: 100%;
@@ -18,10 +19,11 @@
 
 	&__img {
 		@include animation(fadeIn, 1.2s, ease-in);
+		max-width: 60rem;
+		min-height: 40vmin;
 		img {
-			max-width: 60rem;
-			min-height: 40vmin;
 			object-fit: cover;
+			transition: all 1s ease-in-out;
 		}
 		margin: 4vh 4vw;
 		float: left;

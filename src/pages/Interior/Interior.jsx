@@ -27,7 +27,7 @@ function Interior() {
 						<img
 							src={photo.jpg}
 							alt={photo.alt}
-							width='auto'
+							width='100%'
 							height='100%'
 							loading='lazy'
 						/>
