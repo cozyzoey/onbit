@@ -30,10 +30,6 @@ function Home() {
 		<div className='home'>
 			<Helmet>
 				<title>온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='방배역에 위치한 온빛정신건강의학과의원입니다. 면담 위주로 진료합니다.'
-				/>
 				<meta name='robots' content='index, nofollow' />
 			</Helmet>
 			<article className='home__parallax'>
