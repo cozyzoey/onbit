@@ -64,7 +64,7 @@ function Notices({ match }) {
 					<div className='notices__table__info'>
 						<span>
 							<User />
-							{notice.name}
+							관리자
 						</span>
 						<span>
 							<Calendar />
@@ -92,7 +92,7 @@ function Notices({ match }) {
 					>
 						{notice.title}
 					</Link>
-					<span className='notices__table__name'>{notice.name}</span>
+					<span className='notices__table__name'>관리자</span>
 					<span className='notices__table__date'>
 						{notice.createdAt.toDate().toLocaleDateString('ko-KR')}
 					</span>
@@ -125,7 +125,7 @@ function Notices({ match }) {
 					<div className='notices__table__info'>
 						<span>
 							<User />
-							{notice.name}
+							관리자
 						</span>
 						<span>
 							<Calendar />
@@ -155,7 +155,7 @@ function Notices({ match }) {
 					>
 						{notice.title}
 					</Link>
-					<span className='notices__table__name'>{notice.name}</span>
+					<span className='notices__table__name'>관리자</span>
 					<span className='notices__table__date'>
 						{notice.createdAt.toDate().toLocaleDateString('ko-KR')}
 					</span>
@@ -198,11 +198,7 @@ function Notices({ match }) {
 		<div className='notices'>
 			<Helmet>
 				<title>공지사항 &ndash; 온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='휴무일 안내, 병원소식 등 공지사항을 전합니다.'
-				/>
-				<meta name='robots' content='noindex, nofollow' />
+				<meta name='robots' content='noindex' />
 			</Helmet>
 			<section>
 				<SectionHeading>공지사항</SectionHeading>

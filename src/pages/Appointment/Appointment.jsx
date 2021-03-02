@@ -1,10 +1,11 @@
+import './Appointment.scss'
 import React, { useRef, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { Phone, Mail, MessageCircle } from 'react-feather'
 import SectionHeading from '../../components/SectionHeading'
 import OfficeHours from '../../components/OfficeHours'
 import Email from './Email'
-import './Appointment.scss'
 
 function Appointment() {
 	const emailRef = useRef()
@@ -27,16 +28,11 @@ function Appointment() {
 		<article className='appointment'>
 			<Helmet>
 				<title>예약문의 &ndash; 온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='전화, 채팅상담, 이메일을 통해 문의 및 예약이 가능합니다.'
-				/>
-				<meta name='robots' content='noindex, nofollow' />
 			</Helmet>
 			<section>
 				<SectionHeading>예약문의</SectionHeading>
 				<h3>
-					<span>예약과 문의는 전화나 채팅상담, 이메일을</span>&nbsp;
+					<span>예약 및 문의는 전화, 채팅상담, 이메일을</span>&nbsp;
 					<span>이용하실 수 있습니다.</span>
 				</h3>
 				<div className='appointment__actions'>
@@ -64,27 +60,21 @@ function Appointment() {
 					</div>
 				</div>
 				<p>
-					<span>
-						피치 못한 사정이 있을 경우 예약 전일 이전에 연락주시면 예약 취소
-						내지 변경이 가능합니다.
-					</span>
-					<span>
-						당일 예약취소는 불가능하며, 이 경우 내원하지 않으셔도 진료비를
-						지불하셔야 합니다.
-					</span>
+					예약일 하루 전까지 예약 취소 및 변경이 가능합니다. 당일 예약취소는
+					불가능하며, 이 경우 내원하지 않으셔도 진료비를 지불하셔야 합니다.
 				</p>
 				<div className='appointment__info'>
 					<div className='appointment__info__contact'>
 						<h5>연락처</h5>
-						<span>
-							<Phone size={18} /> 02-522-9730
-						</span>
-						<span>
-							<MessageCircle size={18} /> 홈페이지 우측 하단 채널톡
-						</span>
-						<span>
-							<Mail size={18} /> contact@onbitclinic.com
-						</span>
+						<div>
+							<Phone /> 02-522-9730
+						</div>
+						<div>
+							<MessageCircle /> 홈페이지 우측 하단 채널톡
+						</div>
+						<div>
+							<Mail /> contact@onbitclinic.com
+						</div>
 					</div>
 					<div className='appointment__info__office-hours'>
 						<h5>진료시간</h5>
@@ -94,12 +84,9 @@ function Appointment() {
 				<div className='appointment__email'>
 					<div className='appointment__email__reminder'>
 						<p>
-							<span>상담 내용을 메일로 보내주시면</span>&nbsp;
-							<span>확인후 연락드리겠습니다.</span>
-						</p>
-						<p>
-							<span>온빛의 대표 메일과 작성해주신 메일로</span>&nbsp;
-							<span>함께 송부됩니다.</span>
+							상담 내용을 메일로 보내주시면 확인후 연락드리겠습니다. 온빛의 대표
+							메일과 작성해주신 메일로 함께 송부됩니다.{' '}
+							<Link to='/policy'>(개인정보 처리방침)</Link>
 						</p>
 					</div>
 					<div className='appointment__email__body' ref={emailRef}>

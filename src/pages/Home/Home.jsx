@@ -30,7 +30,6 @@ function Home() {
 		<div className='home'>
 			<Helmet>
 				<title>온빛정신건강의학과의원</title>
-				<meta name='robots' content='index, nofollow' />
 			</Helmet>
 			<article className='home__parallax'>
 				<div

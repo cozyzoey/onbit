@@ -47,7 +47,6 @@ export const createNotice = (title, contents, fixed) => async (dispatch) => {
 		fixed,
 		createdAt,
 		hits: 0,
-		name: user.displayName,
 	})
 
 	const detailRef = db.collection('noticeDetail').doc(id)
@@ -57,8 +56,6 @@ export const createNotice = (title, contents, fixed) => async (dispatch) => {
 		fixed,
 		createdAt,
 		hits: 0,
-		name: user.displayName,
-		uid: user.uid,
 	})
 
 	batch
@@ -126,7 +123,7 @@ export const fetchNotice = (id) => async (dispatch) => {
 	db.runTransaction((transaction) => {
 		return transaction.get(detailRef).then((doc) => {
 			if (!doc.exists) {
-				throw 'Document does not exist!'
+				throw '해당하는 문서가 없습니다.'
 			}
 			const newHits = doc.data().hits + 1
 			transaction.update(detailRef, { hits: newHits })

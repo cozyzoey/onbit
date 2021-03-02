@@ -71,14 +71,9 @@ function Email() {
 				},
 				{ crossdomain: true }
 			)
-			.then((response) => {
-				setEmailLoading(false)
-				setEmailSent(true)
-			})
-			.catch((error) => {
-				setEmailLoading(false)
-				setEmailFail(true)
-			})
+			.then((response) => setEmailSent(true))
+			.catch((error) => setEmailFail(true))
+			.finally(() => setEmailLoading(false))
 	}
 
 	return (

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Router, Route, Redirect, Switch } from 'react-router-dom'
 import history from './utils/history'
 import firebase from './utils/firebase'
-//import ChannelService from './utils/ChannelService'
+import ChannelService from './utils/ChannelService'
 import { detachListeners } from './actions/noticeActions'
 import { USER_LOGIN_SUCCESS } from './constants/userConstants'
 import './styles/styles.scss'
@@ -45,14 +45,14 @@ function App() {
 		})
 
 		// === Boot Channel as an anonymous user
-		// ChannelService.boot({
-		// 	pluginKey: process.env.REACT_APP_CHANNEL_PLUGIN_KEY,
-		// 	zIndex: 10,
-		// 	language: 'ko',
-		// })
+		ChannelService.boot({
+			pluginKey: process.env.REACT_APP_CHANNEL_PLUGIN_KEY,
+			zIndex: 10,
+			language: 'ko',
+		})
 
 		return () => {
-			//ChannelService.shutdown()
+			ChannelService.shutdown()
 			dispatch(detachListeners())
 		}
 	}, [dispatch])

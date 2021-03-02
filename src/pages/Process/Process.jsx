@@ -44,11 +44,6 @@ function Process() {
 		<article className='process'>
 			<Helmet>
 				<title>진료과정 &ndash; 온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='예약, 초기면담, 치료계획, 치료진행, 종결'
-				/>
-				<meta name='robots' content='index, nofollow' />
 			</Helmet>
 			<section
 				className='process__chart'

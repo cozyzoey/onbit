@@ -3,7 +3,7 @@
 .notice {
 	grid-column: center-start / center-end;
 	padding: 12rem 2rem;
-	@include animation(fadeIn, 1s, linear);
+	@include animation(fadeIn, 1.4s, ease-in-out);
 	@include respond($bp5) {
 		padding: 10rem 1rem;
 	}
@@ -58,7 +58,7 @@
 
 	&__contents {
 		min-height: 20vh;
-		margin-bottom: 2rem;
+		margin-bottom: 4vh;
 	}
 
 	&__actions {

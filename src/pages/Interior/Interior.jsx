@@ -44,8 +44,7 @@ function Interior() {
 		<div className='interior'>
 			<Helmet>
 				<title>공간소개 &ndash; 온빛정신건강의학과의원</title>
-				<meta name='description' content='입구. 대기 공간. 진료실.' />
-				<meta name='robots' content='noindex, nofollow' />
+				<meta name='robots' content='noindex' />
 			</Helmet>
 			<div className='interior--box' ref={elRef}>
 				{renderPhotos()}

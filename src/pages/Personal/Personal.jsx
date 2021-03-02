@@ -16,11 +16,6 @@ function Personal() {
 		<article className='personal'>
 			<Helmet>
 				<title>개인정신치료 &ndash; 온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='개인 면담치료는 1대 1로 회기당 45분, 주 1~3회씩 이루어집니다.'
-				/>
-				<meta name='robots' content='index, nofollow' />
 			</Helmet>
 			<section>
 				<SectionHeading>개인정신치료</SectionHeading>

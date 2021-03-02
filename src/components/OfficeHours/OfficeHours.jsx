@@ -10,12 +10,13 @@ function OfficeHours() {
 			</div>
 			<div className='office-hours--row'>
 				<div className='office-hours__title'>토요일</div>
-				10:00 ~ 14:00 (점심시간 없음)
+				<span>10:00 ~ 14:00</span>&nbsp;<span>(점심시간 없음)</span>
 			</div>
 			<div className='office-hours--row'>
 				<div className='office-hours__title'>점심시간</div>
 				13:00 ~ 14:00
 			</div>
+			<div>일요일&middot;공휴일 휴진</div>
 		</div>
 	)
 }

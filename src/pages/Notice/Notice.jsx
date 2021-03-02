@@ -25,7 +25,7 @@ function Notice({ match, location }) {
 	}, [dispatch, match])
 
 	const renderNoticeBody = () => {
-		const { title, name, createdAt, hits, contents } = notice
+		const { title, createdAt, hits, contents } = notice
 		return (
 			<>
 				<div className='notice__header'>
@@ -33,7 +33,7 @@ function Notice({ match, location }) {
 					<div className='notice__header__info'>
 						<div>
 							<User />
-							{name}
+							관리자
 						</div>
 						<div>
 							<Calendar />
@@ -84,37 +84,37 @@ function Notice({ match, location }) {
 		<div className='notice'>
 			<Helmet>
 				<title>공지사항 &ndash; 온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='휴무일 안내, 병원소식 등 공지사항을 전합니다.'
-				/>
-				<meta name='robots' content='noindex, nofollow' />
+				<meta name='robots' content='noindex' />
 			</Helmet>
 			<section>
 				<SectionHeading>공지사항</SectionHeading>
 				{notice && renderNoticeBody()}
 				{deleteOpen && renderDeleteModal()}
-				<div className='notice__actions'>
-					<BasicBtn
-						variant='secondary'
-						onClick={() => history.push(`/notices/page/${destPage}`)}
-					>
-						목록보기
-					</BasicBtn>
-					{userInfo && (
-						<div>
-							<BasicBtn
-								variant='secondary'
-								onClick={() => history.push(`/notices/edit/${match.params.id}`)}
-							>
-								수정
-							</BasicBtn>
-							<BasicBtn variant='warning' onClick={() => setDeleteOpen(true)}>
-								삭제
-							</BasicBtn>
-						</div>
-					)}
-				</div>
+				{notice && (
+					<div className='notice__actions'>
+						<BasicBtn
+							variant='secondary'
+							onClick={() => history.push(`/notices/page/${destPage}`)}
+						>
+							목록보기
+						</BasicBtn>
+						{userInfo && (
+							<div>
+								<BasicBtn
+									variant='secondary'
+									onClick={() =>
+										history.push(`/notices/edit/${match.params.id}`)
+									}
+								>
+									수정
+								</BasicBtn>
+								<BasicBtn variant='warning' onClick={() => setDeleteOpen(true)}>
+									삭제
+								</BasicBtn>
+							</div>
+						)}
+					</div>
+				)}
 			</section>
 		</div>
 	)

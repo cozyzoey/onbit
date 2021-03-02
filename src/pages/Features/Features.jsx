@@ -75,11 +75,6 @@ function Features() {
 		<article className='features'>
 			<Helmet>
 				<title>온빛의특징 &ndash; 온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='면담 위주 진료. 적어도 주 1회씩 꾸준한 치료. 환자의 자율성 중시.'
-				/>
-				<meta name='robots' content='index, nofollow' />
 			</Helmet>
 			<div
 				className='features__parallax'
@@ -94,15 +89,15 @@ function Features() {
 				<Fade bottom cascade duration={2000} delay={1000}>
 					<div>
 						<p>
-							정신과적 문제는 크게 두 부분으로 나누어 생각할 수 있습니다.{' '}
+							정신과적 문제는 크게 두 부분으로 나누어 생각할 수 있습니다.&nbsp;
 							<strong>겉으로 보이는 증상</strong>은 병원을 찾게 만든 나를
 							괴롭히는 내용들일 것이고, 정신과적 <strong>약물치료만</strong>
 							으로도 이러한 증상의 많은 부분은 조절이 가능합니다.
 						</p>
 						<p>
 							하지만 증상 이면에 이러한 증상들이 나타날 수밖에 없도록 만든
-							마음의 문제들이 남아 있어 계속해서 문제를 만들어냅니다. 이러한
-							<strong>내면의 문제</strong>를 치료하는 과정을{' '}
+							마음의 문제들이 남아 있어 계속해서 문제를 만들어냅니다. 이러한{' '}
+							<strong>내면의 문제</strong>를 치료하는 과정을&nbsp;
 							<strong>정신치료 또는 면담치료</strong>라고 합니다.
 						</p>
 					</div>

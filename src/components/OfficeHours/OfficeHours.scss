@@ -4,6 +4,9 @@
 		width: 100%;
 		grid-template-columns: 10rem 1fr;
 		padding: 0.3rem 0;
+		& > span {
+			display: inline-block;
+		}
 	}
 
 	&__title {

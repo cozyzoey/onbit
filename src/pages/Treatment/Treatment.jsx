@@ -32,15 +32,10 @@ function Treatment() {
 		<article className='treatment'>
 			<Helmet>
 				<title>진료과목 &ndash; 온빛정신건강의학과의원</title>
-				<meta
-					name='description'
-					content='우울, 불안, 분노, 대인관계, 수면과 식이 장애, 완벽주의/술/마약/성관계/도박/게임 중독, 두통/복통/근육통/피로감 증상'
-				/>
-				<meta name='robots' content='index, nofollow' />
 			</Helmet>
 			<div className='treatment__intro'>
 				<p>
-					해결이 어려운 마음의 문제들은 많은 경우에 해결되지 않은 체 잊혀집니다.
+					해결이 어려운 마음의 문제들은 많은 경우에 해결되지 않은 채 잊혀집니다.
 					무의식적으로 힘드니까 피해버리는 거죠. 하지만 그 문제들은 사라지지
 					않고 남아 점점 거대해지고 어떤 방식으로든 영향을 끼치기 시작합니다.
 				</p>

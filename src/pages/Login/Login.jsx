@@ -37,8 +37,7 @@ function Login({ location }) {
 		<div className='login'>
 			<Helmet>
 				<title>로그인 &ndash; 온빛정신건강의학과의원</title>
-				<meta name='description' content='로그인 화면' />
-				<meta name='robots' content='noindex, nofollow' />
+				<meta name='robots' content='noindex' />
 			</Helmet>
 			{errorMsg && <Alert variant='error'>{errorMsg}</Alert>}
 			<div className='login--box'>

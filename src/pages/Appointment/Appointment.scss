@@ -1,16 +1,15 @@
 @import '../../styles//mixins';
 
 .appointment {
-	@include animation(fadeIn, 1.6s, ease-in-out);
+	@include animation(fadeIn, 1.4s, ease-in-out);
 	grid-column: center-start / center-end;
-	padding: 14vh 2vw 11vh;
+	padding: 14vh 4vw 11vh;
 
 	& > section {
 		position: relative;
 		padding-top: 6rem;
 		& > h3 {
 			text-align: center;
-			padding: 0 0.6rem;
 			margin-bottom: 4rem;
 			font-weight: 400;
 			color: var(--primary);
@@ -20,9 +19,8 @@
 		}
 		& > p {
 			margin: 0 auto 6vh;
-			padding: 0 6vw;
 			max-width: 60rem;
-			color: var(--success);
+			color: var(--info);
 			font-weight: 400;
 			span {
 				display: inline-block;
@@ -48,8 +46,8 @@
 			span {
 				display: block;
 				margin-top: 1rem;
-				font-weight: 400;
-				color: var(--grey-3);
+				font-weight: 500;
+				color: var(--secondary);
 				letter-spacing: 2px;
 			}
 
@@ -125,18 +123,16 @@
 		}
 		&__contact {
 			margin-right: 2rem;
-			width: min-contentl;
-			span {
-				display: block;
+			width: max-content;
+			& > div {
 				color: var(--grey-3);
-				& > span {
-					display: inline-block;
-				}
+				display: flex;
+				align-items: center;
 			}
 			svg {
 				stroke: var(--primary-2);
-				transform: translateY(2px);
 				margin-right: 0.6rem;
+				width: 2rem;
 			}
 			@include respond($bp5) {
 				margin-bottom: 4rem;
@@ -152,15 +148,17 @@
 		flex-direction: column;
 		align-items: center;
 		&__reminder {
-			margin: 1vh auto 6vh;
-			padding: 0 4vw;
+			margin-bottom: 6vh;
 			max-width: 60rem;
 			color: var(--primary);
 			font-weight: 400;
 			font-size: 1.6rem;
 			line-height: 1.7;
-			span {
+			a {
 				display: inline-block;
+				color: var(--primary-2);
+				font-size: 1.5rem;
+				font-weight: 500;
 			}
 		}
 		&__body {

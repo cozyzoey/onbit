@@ -201,7 +201,7 @@ function Header() {
 								)}
 								<div className='header__navfull__contact__info__link'>
 									<Phone />
-									<a href='tel:+82-2-522-9730'>02-522-9730 &nbsp;&gt;</a>
+									<a href='tel:02-522-9730'>02-522-9730 &nbsp;&gt;</a>
 								</div>
 							</div>
 							<div className='header__navfull__contact__map'>

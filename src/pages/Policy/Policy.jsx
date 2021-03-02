@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Policy.scss'
 
 function Policy() {
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
+
 	return (
 		<article className='policy'>
 			<h1>온빛 정신건강의학과의원 개인정보 처리방침</h1>

@@ -23,13 +23,16 @@ function Footer() {
 						<Mail size={14} /> contact@onbitclinic.com
 					</span>
 					<span title='주소'>
-						<MapPin size={14} /> 서울 서초구 효령료33길 45 301호 (KH빌딩 3층)
+						<MapPin size={14} /> <span>서울 서초구 효령로33길 45</span>
+						&nbsp;
+						<span>(KH빌딩 3층)</span>
 					</span>
 					<span>
-						<span>대표자</span> 박노연
+						<span className='footer__contents__title'>대표자</span> 박노연
 					</span>
 					<span>
-						<span>사업자등록번호</span> 566-91-01642
+						<span className='footer__contents__title'>사업자등록번호</span>{' '}
+						566-91-01642
 					</span>
 				</div>
 			</div>
