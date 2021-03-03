@@ -34,7 +34,7 @@ function App() {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		// ===== Get current user
+		// === Get current user
 		firebase.auth().onAuthStateChanged((user) => {
 			if (user) {
 				dispatch({

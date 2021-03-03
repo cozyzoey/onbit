@@ -122,7 +122,7 @@ function Map() {
 							<MapPin />
 							오시는길
 						</div>
-						<div>지하철 2호선 방배역 4번 출구에 있습니다.</div>
+						<div>지하철 2호선 방배역 4번 출구에서 도보로 3분 거리입니다.</div>
 					</div>
 					<div className='map__info--row'>
 						<div className='map__info__title'>
