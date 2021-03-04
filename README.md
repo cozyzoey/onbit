@@ -40,6 +40,11 @@ Firebase에서 제공하는 로컬 테스트 환경인 emulators를 활용하여
 이를 활용해 firestore(DB), authentication, function을 로컬 환경에서 구동했습니다.
 Emulators를 적용하지 않았던 이전 프로젝트(하랑 홈페이지)에 비해 자유롭게 테스트와 개발을 진행할 수 있었습니다.
 
+#### SEO
+
+네이버와 다음에 웹사이트를 등록하는 과정에서 SEO를 개선했습니다.
+구체적으로는 robots.txt 등록 및 페이지별 index 설정, sitemap.xml 등록, open graph 등록을 했습니다.
+
 ## 개선 사항
 
 본 프로젝트는 다음의 개선 사항이 있습니다.
