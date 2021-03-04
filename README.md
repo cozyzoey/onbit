@@ -21,9 +21,9 @@
 
 1. 관리자 계정
 2. 게시판 CRUD (Firebase firestore)
-3. 메일 전송 (Firebase functions)
-4. 채널톡 API
-5. 네이버 지도 API
+3. 메일 전송 (Firebase functions 및 node.js 활용한 REST API 구현)
+4. 채널톡 API 적용
+5. 네이버 지도 API 적용
 6. Parallax Scrolling
 
 ## 주요 이슈
