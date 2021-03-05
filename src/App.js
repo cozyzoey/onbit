@@ -8,9 +8,10 @@ import { detachListeners } from './actions/noticeActions'
 import { USER_LOGIN_SUCCESS } from './constants/userConstants'
 import './styles/styles.scss'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
 import Loader from './components/Loader'
+import Header from './components/Header'
+// import Footer from './components/Footer'
+const Footer = lazy(() => import('./components/Footer'))
 
 const Home = lazy(() => import('./pages/Home'))
 const Login = lazy(() => import('./pages/Login'))
@@ -75,9 +76,9 @@ function App() {
 	return (
 		<div className='app'>
 			<Router history={history}>
-				<Header />
-				<main>
-					<Suspense fallback={<Loader />}>
+				<Suspense fallback={<Loader />}>
+					<Header />
+					<main>
 						<Switch>
 							<Route path='/' component={Home} exact />
 							<Route path='/login' component={Login} />
@@ -100,9 +101,9 @@ function App() {
 							<Route path='/map' component={Map} />
 							<Route path='/policy' component={Policy} />
 						</Switch>
-					</Suspense>
-				</main>
-				<Footer />
+					</main>
+					<Footer />
+				</Suspense>
 			</Router>
 		</div>
 	)
