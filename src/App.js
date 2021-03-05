@@ -10,8 +10,7 @@ import './styles/styles.scss'
 
 import Loader from './components/Loader'
 import Header from './components/Header'
-// import Footer from './components/Footer'
-const Footer = lazy(() => import('./components/Footer'))
+import Footer from './components/Footer'
 
 const Home = lazy(() => import('./pages/Home'))
 const Login = lazy(() => import('./pages/Login'))
@@ -76,8 +75,8 @@ function App() {
 	return (
 		<div className='app'>
 			<Router history={history}>
+				<Header />
 				<Suspense fallback={<Loader />}>
-					<Header />
 					<main>
 						<Switch>
 							<Route path='/' component={Home} exact />
@@ -102,8 +101,8 @@ function App() {
 							<Route path='/policy' component={Policy} />
 						</Switch>
 					</main>
-					<Footer />
 				</Suspense>
+				<Footer />
 			</Router>
 		</div>
 	)

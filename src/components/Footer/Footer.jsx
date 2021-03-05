@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MessageCircle, MapPin, Printer } from 'react-feather'
+import { Phone, Mail, MapPin, Printer } from 'react-feather'
 import { Logo } from '../../assets'
 import './Footer.scss'
 

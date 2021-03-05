@@ -1,9 +1,12 @@
 @import '../../styles/mixins';
 
 .group {
-	@include animation(fadeIn, 1.6s, ease-in);
+	@include animation(fadeIn, 2s, ease-in);
 	grid-column: center-start / center-end;
 	padding: 14vh 4vw 11vh;
+	@include respond($bp8) {
+		min-height: 100vh;
+	}
 
 	& > section {
 		width: 100%;
