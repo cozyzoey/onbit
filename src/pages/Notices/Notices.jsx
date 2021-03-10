@@ -15,7 +15,7 @@ function Notices({ match }) {
 	const { notices, query } = useSelector((state) => state.fetchNotices)
 
 	const dispatch = useDispatch()
-	const per = 2 // === 10 notices per page
+	const per = 10 // === 10 notices per page
 
 	useEffect(() => {
 		window.scrollTo(0, 0)
