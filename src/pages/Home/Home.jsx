@@ -17,7 +17,9 @@ function Home() {
 			img.src = imgSrc
 			img.onload = () => setSourceLoaded(imgSrc)
 		}
-		if (window.screen.height * 1.08 < 720) {
+		if (window.screen.width < 500) {
+			style(sunset.src500)
+		} else if (window.screen.height * 1.08 < 720) {
 			style(sunset.src1280)
 		} else if (window.screen.height * 1.08 < 1080) {
 			style(sunset.src1920)
