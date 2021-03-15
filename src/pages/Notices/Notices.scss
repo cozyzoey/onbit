@@ -3,7 +3,6 @@
 .notices {
 	grid-column: center-start / center-end;
 	padding: 14vh 2vw 11vh;
-	@include animation(fadeIn, 1s, ease-in);
 
 	& > section {
 		position: relative;

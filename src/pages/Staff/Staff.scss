@@ -1,13 +1,8 @@
 @import '../../styles/mixins';
 
 .staff {
-	@include animation(fadeIn, 1.6s, ease-in);
 	grid-column: center-start / center-end;
 	padding: 14vh 2vw;
-
-	@include respond($bp8) {
-		min-height: 100vh;
-	}
 
 	& > section {
 		padding-top: 8vh;

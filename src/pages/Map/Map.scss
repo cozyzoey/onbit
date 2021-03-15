@@ -1,7 +1,6 @@
 @import '../../styles//mixins';
 
 .map {
-	@include animation(fadeIn, 1.6s, ease-in);
 	grid-column: center-start / center-end;
 	padding: 14vh 2vw 11vh;
 

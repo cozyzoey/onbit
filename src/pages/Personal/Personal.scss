@@ -1,7 +1,6 @@
 @import '../../styles//mixins';
 
 .personal {
-	@include animation(fadeIn, 1.6s, ease-in);
 	grid-column: center-start / center-end;
 	padding: 14vh 4vw 11vh;
 

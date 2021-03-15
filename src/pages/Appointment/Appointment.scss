@@ -1,7 +1,6 @@
 @import '../../styles//mixins';
 
 .appointment {
-	@include animation(fadeIn, 1.4s, ease-in-out);
 	grid-column: center-start / center-end;
 	padding: 14vh 4vw 11vh;
 

@@ -3,7 +3,6 @@
 .notice {
 	grid-column: center-start / center-end;
 	padding: 12rem 2rem;
-	@include animation(fadeIn, 1.4s, ease-in-out);
 	@include respond($bp5) {
 		padding: 10rem 1rem;
 	}

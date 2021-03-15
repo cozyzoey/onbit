@@ -3,7 +3,6 @@
 .treatment {
 	grid-column: center-start / center-end;
 	padding: 14vh 3vw 4vh;
-	@include animation(fadeIn, 1s, ease-in);
 
 	& > * {
 		width: 100%;

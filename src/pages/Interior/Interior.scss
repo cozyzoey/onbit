@@ -3,7 +3,6 @@
 .interior {
 	grid-column: full-start / full-end;
 	padding: 14vh 2vw 0;
-	@include animation(fadeIn, 1.6s, ease-in);
 
 	&--box {
 		display: flex;
