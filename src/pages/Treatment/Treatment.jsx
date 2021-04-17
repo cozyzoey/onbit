@@ -1,9 +1,9 @@
+import './Treatment.scss'
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { symptoms } from '../../assets'
-import './Treatment.scss'
 
 function Treatment() {
 	useEffect(() => {

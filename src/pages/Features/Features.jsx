@@ -1,9 +1,9 @@
+import './Features.scss'
 import React, { useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { sunlight, features } from '../../assets'
-import './Features.scss'
 
 function Features() {
 	const [sourceLoaded, setSourceLoaded] = useState(null)

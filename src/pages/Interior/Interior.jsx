@@ -1,10 +1,10 @@
+import './Interior.scss'
 import React, { useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet'
 import { nanoid } from 'nanoid'
 import Fade from 'react-reveal/Fade'
 import { interiors } from '../../assets'
 
-import './Interior.scss'
 
 function Interior() {
 	const elRef = useRef()

@@ -1,9 +1,9 @@
+import './Staff.scss'
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Fade from 'react-reveal/Fade'
 import SectionHeading from '../../components/SectionHeading'
 import { profile } from '../../assets'
-import './Staff.scss'
 
 function Staff() {
 	const [imgLoaded, setImgLoaded] = useState(false)
