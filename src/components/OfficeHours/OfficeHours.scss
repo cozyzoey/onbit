@@ -1,17 +1,23 @@
 .office-hours {
-	&--row {
-		display: grid;
-		width: 100%;
-		grid-template-columns: 10rem 1fr;
-		padding: 0.3rem 0;
-		& > span {
-			display: inline-block;
-		}
-	}
+  &--row {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10rem 1fr;
+    padding: 0.3rem 0;
+    & > span {
+      display: inline-block;
+    }
+  }
 
-	&__title {
-		text-align: left;
-		font-weight: 400;
-		margin-right: 2rem;
-	}
+  &__title {
+    text-align: left;
+    font-weight: 400;
+    margin-right: 2rem;
+  }
+
+  &__holiday {
+    margin-top: 0.6rem;
+    color: var(--secondary-2);
+    font-weight: 400;
+  }
 }

@@ -1,15 +1,13 @@
 import './Interior.scss'
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import parse from 'html-react-parser'
 import { Helmet } from 'react-helmet'
 import { nanoid } from 'nanoid'
 import Fade from 'react-reveal/Fade'
 import { interiors } from '../../assets'
-import { logDOM } from '@testing-library/dom'
 
 function Interior() {
   const elRef = useRef()
-  const [imgLoaded, setImgLoaded] = useState({})
 
   useEffect(() => {
     const onWheel = (e) => {
