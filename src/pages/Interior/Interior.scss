@@ -1,57 +1,59 @@
 @import '../../styles/mixins';
 
 .interior {
-	grid-column: full-start / full-end;
-	padding: 14vh 2vw 0;
+  grid-column: full-start / full-end;
+  padding: 14vh 2vw 0;
 
-	&--box {
-		display: flex;
-		padding-bottom: 4rem;
-		align-items: center;
-		flex-wrap: nowrap;
-		overflow-x: scroll;
-		// === Custom scrollbar
-		&::-webkit-scrollbar {
-			height: 1.4rem;
-		}
-		&::-webkit-scrollbar-track {
-			background: var(--light);
-		}
-		&::-webkit-scrollbar-thumb {
-			background: var(--grey);
-			border-radius: 10rem;
-		}
-	}
+  &--box {
+    display: flex;
+    padding-bottom: 4rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    // === Custom scrollbar
+    &::-webkit-scrollbar {
+      height: 1.4rem;
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--light);
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--grey);
+      border-radius: 10rem;
+    }
+  }
 
-	&__item {
-		padding: 1rem;
-		border-radius: 0.3rem;
-		width: fit-content;
-		box-sizing: border-box;
-		flex: 0 0 auto;
-		margin-right: 10vmin;
-		position: relative;
-		perspective: 10rem;
-		box-shadow: 0 2px 1rem -0.4rem rgba(0, 0, 0, 0.4);
-	}
+  &__item {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    width: fit-content;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    margin-right: 10vmin;
+    position: relative;
+    perspective: 10rem;
+    box-shadow: 0 2px 1rem -0.4rem rgba(0, 0, 0, 0.4);
+  }
 
-	&__img {
-		width: 500px;
-		height: 400px;
-		img {
-			object-fit: cover;
-		}
-		@include respond($bp5) {
-			width: 90vmin;
-			height: 72vmin;
-		}
-	}
+  &__img {
+    width: 640px;
+    height: 360px;
+    img {
+      object-fit: cover;
+      transition: opacity 0.4s ease-out;
+    }
+    @include respond($bp8) {
+      width: 90vw;
+      height: 50.625vw;
+    }
+  }
 
-	&__desc {
-		display: inline-block;
-		letter-spacing: 2px;
-		font-weight: 400;
-		padding: 3rem 0.6rem;
-		color: var(--grey-2);
-	}
+  &__desc {
+    width: 100%;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 3rem 0.6rem;
+    color: var(--grey-2);
+  }
 }
