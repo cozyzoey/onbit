@@ -69,32 +69,32 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className='app'>
       <Router history={history}>
         <Header />
         <Suspense fallback={<Loader />}>
           <main>
             <Switch>
-              <Route path="/" component={Home} exact />
-              <Route path="/login" component={Login} />
-              <Route path="/features" component={Features} />
-              <Route path="/staff" component={Staff} />
-              <Route path="/interior" component={Interior} />
-              <Route path="/treatment" component={Treatment} />
-              <Route path="/process" component={Process} />
-              <Route path="/personal-therapy" component={Personal} />
-              <Route path="/group-therapy" component={Group} />
-              <PrivateRoute path="/notices/new" component={NoticeCreate} />
-              <Route path="/notices/page/:page" component={Notices} exact />
+              <Route path='/' component={Home} exact />
+              <Route path='/login' component={Login} />
+              <Route path='/features' component={Features} />
+              <Route path='/staff' component={Staff} />
+              <Route path='/interior' component={Interior} />
+              <Route path='/treatment' component={Treatment} />
+              <Route path='/process' component={Process} />
+              <Route path='/personal-therapy' component={Personal} />
+              <Route path='/group-therapy' component={Group} />
+              <PrivateRoute path='/notices/new' component={NoticeCreate} />
+              <Route path='/notices/page/:page' component={Notices} exact />
               <PrivateRoute
-                path="/notices/edit/:id"
+                path='/notices/edit/:id'
                 component={NoticeUpdate}
                 exact
               />
-              <Route path="/notices/:id" component={Notice} />
-              <Route path="/appointment" component={Appointment} />
-              <Route path="/map" component={Map} />
-              <Route path="/policy" component={Policy} />
+              <Route path='/notices/:id' component={Notice} />
+              <Route path='/appointment' component={Appointment} />
+              <Route path='/map' component={Map} />
+              <Route path='/policy' component={Policy} />
             </Switch>
           </main>
         </Suspense>

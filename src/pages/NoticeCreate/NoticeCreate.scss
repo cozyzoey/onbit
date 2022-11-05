@@ -1,7 +1,7 @@
 @import '../../styles/mixins';
 
 .notice-create {
-	@include animation(fadeIn, 1s, ease-in-out);
-	grid-column: center-start / center-end;
-	padding: 18vh 2vw 8vh;
+  @include animation(fadeIn, 1s, ease-in-out);
+  grid-column: center-start / center-end;
+  padding: 18vh 2vw 8vh;
 }

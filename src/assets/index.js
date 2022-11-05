@@ -14,13 +14,13 @@ import { ReactComponent as Logo } from './icons/logo.svg'
 
 export { sunlight, sunset, forest }
 export {
-	parking,
-	parking_800w,
-	personal,
-	group,
-	profile,
-	interiors,
-	symptoms,
-	features,
+  parking,
+  parking_800w,
+  personal,
+  group,
+  profile,
+  interiors,
+  symptoms,
+  features,
 }
 export { Logo }

@@ -11,33 +11,33 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.use(cors)
 
 let transporter = nodemailer.createTransport({
-	host: 'smtp.daum.net',
-	port: 465,
-	secure: true,
-	auth: {
-		user: process.env.EMAIL_USER,
-		pass: process.env.EMAIL_PASS,
-	},
+  host: 'smtp.daum.net',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
 })
 
 app.post('/api/email', (req, res) => {
-	const { name, email, phone, content } = req.body
-	console.log(content)
-	console.log(typeof content)
+  const { name, email, phone, content } = req.body
+  console.log(content)
+  console.log(typeof content)
 
-	const mailOptions = {
-		from: {
-			name: '온빛클리닉',
-			address: 'contact@onbitclinic.com',
-		},
-		to: 'contact@onbitclinic.com',
-		cc: {
-			name: name,
-			address: email,
-		},
-		subject: name + '님의 문의입니다.',
-		text: content + '/' + name + '/' + phone + '/' + email,
-		html: `
+  const mailOptions = {
+    from: {
+      name: '온빛클리닉',
+      address: 'contact@onbitclinic.com',
+    },
+    to: 'contact@onbitclinic.com',
+    cc: {
+      name: name,
+      address: email,
+    },
+    subject: name + '님의 문의입니다.',
+    text: content + '/' + name + '/' + phone + '/' + email,
+    html: `
 			<div style="color: #3d4744;">
 				<p>${content.replace(/\n\r?/g, '<br />')}</p>
 				<br />
@@ -48,15 +48,15 @@ app.post('/api/email', (req, res) => {
 				</div>
 			</div>
 			`,
-	}
-	return transporter.sendMail(mailOptions, (error, data) => {
-		if (error) {
-			console.log('Email error')
-			return res.send(error.toString())
-		}
-		console.log('Email sent')
-		return res.send('Email sent')
-	})
+  }
+  return transporter.sendMail(mailOptions, (error, data) => {
+    if (error) {
+      console.log('Email error')
+      return res.send(error.toString())
+    }
+    console.log('Email sent')
+    return res.send('Email sent')
+  })
 })
 
 exports.app = functions.region('asia-northeast2').https.onRequest(app)

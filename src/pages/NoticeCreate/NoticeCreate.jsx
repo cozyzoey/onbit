@@ -7,21 +7,21 @@ import Editor from '../../components/Editor'
 import './NoticeCreate.scss'
 
 function NoticeCreate() {
-	const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-	const onFormSubmit = (title, contents, fixed) => {
-		dispatch(createNotice(title, contents, fixed))
-	}
+  const onFormSubmit = (title, contents, fixed) => {
+    dispatch(createNotice(title, contents, fixed))
+  }
 
-	return (
-		<div className='notice-create'>
-			<Helmet>
-				<title>글쓰기 &ndash; 온빛정신건강의학과의원</title>
-				<meta name='robots' content='noindex' />
-			</Helmet>
-			<Editor onFormSubmit={onFormSubmit} />
-		</div>
-	)
+  return (
+    <div className='notice-create'>
+      <Helmet>
+        <title>글쓰기 &ndash; 온빛정신건강의학과의원</title>
+        <meta name='robots' content='noindex' />
+      </Helmet>
+      <Editor onFormSubmit={onFormSubmit} />
+    </div>
+  )
 }
 
 export default NoticeCreate

@@ -1,8 +1,8 @@
 @import '../../styles/mixins';
 
 .notice-update {
-	grid-column: center-start / center-end;
-	padding: 18vh 2vw 8vh;
-	box-sizing: border-box;
-	@include animation(fadeIn, 1s, ease-in-out);
+  grid-column: center-start / center-end;
+  padding: 18vh 2vw 8vh;
+  box-sizing: border-box;
+  @include animation(fadeIn, 1s, ease-in-out);
 }

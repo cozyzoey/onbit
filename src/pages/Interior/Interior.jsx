@@ -19,34 +19,34 @@ function Interior() {
 
   const renderPhotos = () => {
     return interiors.map((photo, index) => (
-      <div key={nanoid(12)} className="interior__item">
-        <div className="interior__img">
+      <div key={nanoid(12)} className='interior__item'>
+        <div className='interior__img'>
           <picture>
-            <source type="image/webp" srcSet={photo.webp} />
-            <source type="image/jpeg" srcSet={photo.jpg} />
+            <source type='image/webp' srcSet={photo.webp} />
+            <source type='image/jpeg' srcSet={photo.jpg} />
             <img
               src={photo.jpg}
               alt={photo.alt}
-              width="100%"
-              height="100%"
-              loading="lazy"
+              width='100%'
+              height='100%'
+              loading='lazy'
             />
           </picture>
         </div>
         <Fade right cascade>
-          <span className="interior__desc">{parse(photo.title)}</span>
+          <span className='interior__desc'>{parse(photo.title)}</span>
         </Fade>
       </div>
     ))
   }
 
   return (
-    <div className="interior">
+    <div className='interior'>
       <Helmet>
         <title>공간소개 &ndash; 온빛정신건강의학과의원</title>
-        <meta name="robots" content="noindex" />
+        <meta name='robots' content='noindex' />
       </Helmet>
-      <div className="interior--box" ref={elRef}>
+      <div className='interior--box' ref={elRef}>
         {renderPhotos()}
       </div>
     </div>

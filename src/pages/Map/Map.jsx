@@ -80,20 +80,20 @@ function Map() {
   }
 
   return (
-    <article className="map">
+    <article className='map'>
       <Helmet>
         <title>오시는길 &ndash; 온빛정신건강의학과의원</title>
       </Helmet>
-      {addressCopied && <Alert variant="success">주소를 복사했습니다</Alert>}
+      {addressCopied && <Alert variant='success'>주소를 복사했습니다</Alert>}
       <section>
         <SectionHeading>오시는길</SectionHeading>
-        <div className="map__header">
+        <div className='map__header'>
           <div
-            className="map__header__map"
+            className='map__header__map'
             ref={mapRef}
             style={{ opacity: mapLoaded ? 1 : 0 }}
           ></div>
-          <div className="map__header__address">
+          <div className='map__header__address'>
             <div>
               <p>온빛정신건강의학과</p>
               <h2 ref={addressRef}>
@@ -101,14 +101,14 @@ function Map() {
                 <span>(KH빌딩)</span>
               </h2>
             </div>
-            <div className="map__header__actions">
-              <BasicBtn onClick={onAddressCopy} variant="info">
+            <div className='map__header__actions'>
+              <BasicBtn onClick={onAddressCopy} variant='info'>
                 주소복사
               </BasicBtn>
-              <BasicBtn variant="primary">
+              <BasicBtn variant='primary'>
                 <a
-                  href="https://map.naver.com/v5/search/%EC%98%A8%EB%B9%9B%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95/place/1977317170?c=14137213.6864790,4506706.6133002,19,0,0,0,dh"
-                  target="__blank"
+                  href='https://map.naver.com/v5/search/%EC%98%A8%EB%B9%9B%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95/place/1977317170?c=14137213.6864790,4506706.6133002,19,0,0,0,dh'
+                  target='__blank'
                 >
                   지도에서 보기
                 </a>
@@ -116,36 +116,36 @@ function Map() {
             </div>
           </div>
         </div>
-        <div className="map__info">
-          <div className="map__info--row">
-            <div className="map__info__title">
+        <div className='map__info'>
+          <div className='map__info--row'>
+            <div className='map__info__title'>
               <MapPin />
               오시는길
             </div>
             <div>지하철 2호선 방배역 4번 출구에서 도보로 3분 거리입니다.</div>
           </div>
-          <div className="map__info--row">
-            <div className="map__info__title">
+          <div className='map__info--row'>
+            <div className='map__info__title'>
               <MapPin />
               주차안내
             </div>
             <div>
               건물 입구 옆 1시간 무료주차 가능합니다.
-              <div className="map__info__img">
+              <div className='map__info__img'>
                 <picture>
                   <source
-                    type="image/webp"
-                    sizes="(max-width: 500px) 384px, (max-width: 800px) 630px, 700px"
+                    type='image/webp'
+                    sizes='(max-width: 500px) 384px, (max-width: 800px) 630px, 700px'
                     srcSet={parking.webp}
                   />
                   <img
-                    sizes="(max-width: 500px) 384px, (max-width: 800px) 630px, 700px"
+                    sizes='(max-width: 500px) 384px, (max-width: 800px) 630px, 700px'
                     srcSet={parking.jpg}
                     src={parking_800w}
                     alt={parking.alt}
-                    width="100%"
-                    height="100%"
-                    loading="lazy"
+                    width='100%'
+                    height='100%'
+                    loading='lazy'
                     onLoad={() => setImgLoaded(true)}
                     style={{ opacity: imgLoaded ? 1 : 0 }}
                   />
@@ -153,15 +153,15 @@ function Map() {
               </div>
             </div>
           </div>
-          <div className="map__info--row">
-            <div className="map__info__title">
+          <div className='map__info--row'>
+            <div className='map__info__title'>
               <Phone />
               전화번호
             </div>
             <div>02-522-9730</div>
           </div>
-          <div className="map__info--row">
-            <div className="map__info__title">
+          <div className='map__info--row'>
+            <div className='map__info__title'>
               <Clock />
               진료시간
             </div>
@@ -169,26 +169,26 @@ function Map() {
               <OfficeHours />
             </div>
           </div>
-          <div className="map__info--row">
-            <div className="map__info__title">
+          <div className='map__info--row'>
+            <div className='map__info__title'>
               <Info />
               이용안내
             </div>
-            <div className="map__info__icons">
+            <div className='map__info__icons'>
               <div>
-                <FontAwesomeIcon icon={faCalendar} size="2x" />
+                <FontAwesomeIcon icon={faCalendar} size='2x' />
                 예약가능
               </div>
               <div>
-                <FontAwesomeIcon icon={faParking} size="2x" />
+                <FontAwesomeIcon icon={faParking} size='2x' />
                 주차공간
               </div>
               <div>
-                <FontAwesomeIcon icon={faRestroom} size="2x" />
+                <FontAwesomeIcon icon={faRestroom} size='2x' />
                 공용화장실
               </div>
               <div>
-                <FontAwesomeIcon icon={faWifi} size="2x" />
+                <FontAwesomeIcon icon={faWifi} size='2x' />
                 무선인터넷
               </div>
             </div>

@@ -1,19 +1,19 @@
 @import '../../../styles//mixins';
 
 .email {
-	& > input {
-		@include basicInputStyle();
-		padding: 1rem 2rem;
-		border-bottom: 1px solid var(--grey);
-		letter-spacing: 0.3rem;
-	}
-	& > textarea {
-		@include basicTextareaStyle();
-		border-bottom: 1px solid var(--grey);
-		white-space: pre-wrap;
-	}
-	&__btn {
-		margin-top: 2rem;
-		text-align: right;
-	}
+  & > input {
+    @include basicInputStyle();
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--grey);
+    letter-spacing: 0.3rem;
+  }
+  & > textarea {
+    @include basicTextareaStyle();
+    border-bottom: 1px solid var(--grey);
+    white-space: pre-wrap;
+  }
+  &__btn {
+    margin-top: 2rem;
+    text-align: right;
+  }
 }
