@@ -14,16 +14,7 @@ $bp10: calc(1000em / 16);
   }
 }
 
-// === Animations
-
-@mixin keyframe($animation_name) {
-  @-webkit-keyframes #{$animation_name} {
-    @content;
-  }
-  @keyframes #{$animation_name} {
-    @content;
-  }
-}
+// === Animation
 
 @mixin animation(
   $name,
@@ -49,35 +40,6 @@ $bp10: calc(1000em / 16);
   animation-iteration-count: $iteration-count;
   animation-direction: $direction;
   animation-fill-mode: $fillmode;
-}
-
-@include keyframe(fadeIn) {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@include keyframe(fadeOut) {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@include keyframe(slideToBottom) {
-  0% {
-    opacity: 0;
-    transform: translate(0, -10%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
 }
 
 // === Basic styles
