@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "caniuse-lite": "^1.0.30001430",
     "firebase": "^8.2.3",
     "html-react-parser": "^1.2.1",
     "nanoid": "^3.1.20",
@@ -31,7 +32,7 @@
   "scripts": {
     "start": "react-scripts start",
     "firebase": "firebase emulators:start",
-    "dev": "concurrently \"yarn start\" \"yarn run firebase\"",
+    "dev": "concurrently \"npm start\" \"npm run firebase\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

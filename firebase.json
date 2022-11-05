@@ -11,6 +11,9 @@
     },
     "ui": {
       "enabled": true
+    },
+    "hosting": {
+      "port": 5004
     }
   },
   "functions": {
@@ -18,26 +21,28 @@
   },
   "hosting": {
     "public": "build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [ {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
-    }, {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
-    }, {
-      "source": "/naver34b8c4ab93094bfaa584071d2a12d05a.html",
-      "destination": "/naver34b8c4ab93094bfaa584071d2a12d05a.html"
-    },{
-      "source": "/api/**",
-      "function": "app"
-    }, {
-      "source": "**",
-      "destination": "/index.html"
-    } ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/robots.txt",
+        "destination": "/robots.txt"
+      },
+      {
+        "source": "/sitemap.xml",
+        "destination": "/sitemap.xml"
+      },
+      {
+        "source": "/naver34b8c4ab93094bfaa584071d2a12d05a.html",
+        "destination": "/naver34b8c4ab93094bfaa584071d2a12d05a.html"
+      },
+      {
+        "source": "/api/**",
+        "function": "app"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }

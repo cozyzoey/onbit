@@ -43,10 +43,10 @@ Firebase에서 제공하는 로컬 테스트 환경인 emulators를 활용하여
 
 <!-- https://github.com/Ileriayo/markdown-badges -->
 
--   [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
--   [![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
--   [![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)](https://sass-lang.com/)
--   [![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)](https://firebase.google.com/)
+- [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
+- [![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
+- [![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)](https://sass-lang.com/)
+- [![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)](https://firebase.google.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,13 +54,45 @@ Firebase에서 제공하는 로컬 테스트 환경인 emulators를 활용하여
 
 ## Features
 
--   관리자 계정
--   공지사항 CRUD (Firebase firestore)
--   메일 전송 (Firebase functions 및 nodemailer)
--   네이버 지도 API
--   랜딩페이지 Parallax Scrolling
+- 관리자 계정
+- 공지사항 CRUD (Firebase firestore)
+- 메일 전송 (Firebase functions 및 nodemailer)
+- 네이버 지도 API
+- 랜딩페이지 Parallax Scrolling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+이 프로젝트를 로컬에서 실행하려면 아래를 참고하세요.
+
+### Prerequisite
+
+앱을 실행하기 위해서 아래와 같은 사전 준비가 필요합니다.
+
+- npm
+- firebase-tools
+- java >= v11
+- node v14
+
+### Installation
+
+1. 로컬 디렉토리에 repo를 복제합니다.
+   ```sh
+   git clone https://github.com/cozyzoey/onbit.git
+   cd onbit
+   ```
+2. NPM 패키지를 설치합니다.
+   ```sh
+   npm install
+   cd functions && npm install
+   ```
+3. 프로젝트 루트에서 코드를 실행한 후 브라우저에서 http://localhost:3000에 접속합니다.
+   ```sh
+   npm run dev
+   ```
 
 <!-- CONTACT -->
 
@@ -76,7 +108,7 @@ Project Link: [https://github.com/cozyzoey/onbit](https://github.com/cozyzoey/on
 
 ## Acknowledgments
 
--   [Performant Parallaxing](https://developer.chrome.com/blog/performant-parallaxing/)
--   [Firebase Hosting](https://firebase.google.com/docs/hosting)
+- [Performant Parallaxing](https://developer.chrome.com/blog/performant-parallaxing/)
+- [Firebase Hosting](https://firebase.google.com/docs/hosting)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
