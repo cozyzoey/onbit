@@ -44,7 +44,7 @@ function Notices({ match }) {
 
   useEffect(() => {
     notices && setTotal(notices.filter((notice) => !notice.fixed).length)
-  }, [notices?.length, query])
+  }, [notices, query])
 
   const renderFixedNotices = () => {
     const fixed = notices?.filter((notice) => notice.fixed)
@@ -168,7 +168,6 @@ function Notices({ match }) {
   }
 
   const renderPagination = () => {
-    const page = match.params.page
     const pages = Math.ceil(total / per)
 
     return (

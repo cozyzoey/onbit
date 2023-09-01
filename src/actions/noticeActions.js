@@ -123,7 +123,7 @@ export const fetchNotice = (id) => async (dispatch) => {
   db.runTransaction((transaction) => {
     return transaction.get(detailRef).then((doc) => {
       if (!doc.exists) {
-        throw '해당하는 문서가 없습니다.'
+        throw new Error('해당하는 문서가 없습니다.')
       }
       const newHits = doc.data().hits + 1
       transaction.update(detailRef, { hits: newHits })

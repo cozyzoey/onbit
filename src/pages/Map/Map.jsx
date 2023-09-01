@@ -58,7 +58,7 @@ function Map() {
         },
       }
       const map = new window.naver.maps.Map(mapRef.current, mapOptions)
-      const marker = new window.naver.maps.Marker({
+      new window.naver.maps.Marker({
         position: new window.naver.maps.LatLng(37.483379, 126.997003),
         map: map,
       })

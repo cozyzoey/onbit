@@ -60,7 +60,7 @@ function Header() {
 
   useEffect(() => {
     !notices && dispatch(fetchNotices())
-  }, [notices])
+  }, [notices, dispatch])
 
   return (
     <header className='header'>
