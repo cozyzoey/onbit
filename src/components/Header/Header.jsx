@@ -206,7 +206,7 @@ function Header() {
               </div>
               <div className='header__navfull__contact__map'>
                 <img
-                  src={`https://naveropenapi.apigw.ntruss.com/map-static/v2/raster-cors?w=300&h=300&&markers=type:d|size:tiny|color:0xF8F8F8|pos:126.9976%2037.481&markers=type:d|size:mid|color:0xf7c3ad|pos:126.99705%2037.48335&X-NCP-APIGW-API-KEY-ID=${process.env.REACT_APP_MAP_CLIENT_ID}`}
+                  src={`https://naveropenapi.apigw.ntruss.com/map-static/v2/raster-cors?w=300&h=300&&markers=type:d|size:tiny|color:0xF8F8F8|pos:126.9976%2037.481&markers=type:d|size:mid|color:0xf7c3ad|pos:126.99705%2037.48335&X-NCP-APIGW-API-KEY-ID=${process.env.REACT_APP_MAP_CLIENT_ID}&format=png`}
                   alt='온빛정신건강의학과의원 네이버 지도'
                   width='300px'
                   height='300px'

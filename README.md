@@ -75,7 +75,7 @@ Firebase에서 제공하는 로컬 테스트 환경인 emulators를 활용하여
 - npm
 - firebase-tools
 - java >= v11
-- node v14
+- node v16
 
 ### Installation
 
