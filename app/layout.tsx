@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Gothic_A1 } from "next/font/google";
 
+import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 
 const gothic_a1 = Gothic_A1({
@@ -26,7 +27,8 @@ export default function RootLayout({
     <html lang="ko" className={gothic_a1.variable}>
       <body className="bg-stone-50 text-gray-900">
         <Header />
-        <main>{children}</main>
+        <main className="h-40">{children}</main>
+        <Footer />
       </body>
     </html>
   );
