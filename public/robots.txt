@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://onbitclinic.com/sitemap.xml
-#DaumWebMasterTool:6a19b74fd98e53613f47ab8b19c9b7ac8a6fede82c50601e39a914d3561df858:Np/zoemXpCo2hdareduXng==
