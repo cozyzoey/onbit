@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="ko" className={gothic_a1.variable}>
       <body className="bg-stone-50 text-gray-900">
         <Header />
-        <main className="h-40">{children}</main>
+        <main className="py-16 xl:py-20">{children}</main>
         <Footer />
       </body>
     </html>

@@ -17,6 +17,16 @@ module.exports = {
           900: "#323c59",
         },
       },
+      keyframes: {
+        toright: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        flip: {
+          "0%": { transform: "rotateY(-90deg)", opacity: "0" },
+          "100%": { transform: "rotateY(0deg)", opacity: "1" },
+        },
+      },
     },
   },
   plugins: [],
