@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-gothic-a1)"],
+        mono: ["var(--font-jua)"],
+      },
       colors: {
         primary: {
           700: "#dbc9c5",
