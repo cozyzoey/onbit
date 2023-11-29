@@ -5,11 +5,11 @@ export default function PageHeading({ text }: { text: string }) {
     <div className="flex items-center gap-x-3 overflow-hidden">
       <span
         className={clsx(
-          "inline-block h-px w-10 bg-primary-900",
+          "inline-block h-px w-8 bg-primary-900 xl:w-10",
           "animate-[toright_1s]",
         )}
       ></span>
-      <h1 className="-z-10 w-max text-2xl font-medium">
+      <h2 className="text:lg -z-10 w-max font-semibold xl:text-xl">
         {text.split("").map((char, idx) => (
           <span
             key={idx}
@@ -21,7 +21,7 @@ export default function PageHeading({ text }: { text: string }) {
             {char}
           </span>
         ))}
-      </h1>
+      </h2>
     </div>
   );
 }
