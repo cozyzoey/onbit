@@ -48,7 +48,7 @@ export default function FeaturesPage() {
                 {...imgProps}
                 alt={imgProps.alt}
                 sizes="640px"
-                className="aspect-square w-80 object-cover shadow-lg"
+                className="aspect-square w-80 shrink-0 object-cover shadow-lg"
               />
             </li>
           ))}
