@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-gothic-a1)"],
-        mono: ["var(--font-jua)"],
+        mono: ["var(--font-east-sea-dokdo)"],
       },
       colors: {
         primary: {

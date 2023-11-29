@@ -70,7 +70,7 @@ export default function Home() {
             >
               <div
                 className={clsx(
-                  "mb-16 w-max font-mono text-7xl font-bold opacity-50 md:text-8xl xl:text-9xl",
+                  "mb-16 w-max font-mono text-9xl font-bold opacity-50 xl:text-[240px]",
                   idx % 2 === 0 ? "" : "md:ml-auto",
                 )}
               >
