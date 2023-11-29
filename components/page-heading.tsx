@@ -1,8 +1,16 @@
 import clsx from "clsx";
+import { ComponentPropsWithoutRef } from "react";
 
-export default function PageHeading({ text }: { text: string }) {
+export default function PageHeading({
+  text,
+  className,
+  ...props
+}: { text: string } & ComponentPropsWithoutRef<"div">) {
   return (
-    <div className="flex items-center gap-x-3 overflow-hidden">
+    <div
+      className={clsx("flex items-center gap-x-3 overflow-hidden", className)}
+      {...props}
+    >
       <span
         className={clsx(
           "inline-block h-px w-8 bg-primary-900 xl:w-10",

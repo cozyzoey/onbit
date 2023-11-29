@@ -6,7 +6,7 @@ import { cloudinaryImgUrl } from "@/lib/utils";
 
 export default function FeaturesPage() {
   return (
-    <div>
+    <>
       <Image
         src={cloudinaryImgUrl("sunlight_flower_vlnpor.jpg")}
         alt="햇빛이 비치는 꽃밭"
@@ -15,7 +15,7 @@ export default function FeaturesPage() {
         sizes="100vw"
         className="h-64 object-cover md:h-80 xl:h-96"
       />
-      <article className="mx-auto max-w-screen-lg px-4 pb-28 pt-12 md:pt-16">
+      <article className="content-wrapper">
         <PageHeading text="온빛의 특징" />
         <section className="ml-auto mt-8 flex max-w-screen-md flex-col gap-x-8 gap-y-4 md:flex-row">
           <p>
@@ -54,6 +54,6 @@ export default function FeaturesPage() {
           ))}
         </ul>
       </article>
-    </div>
+    </>
   );
 }

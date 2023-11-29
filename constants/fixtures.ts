@@ -13,7 +13,7 @@ export const NAV_MENU: {
     submenus: [
       { title: "온빛의 특징", href: "/features" },
       { title: "의료진 소개", href: "/staff" },
-      { title: "공간 소개", href: "/" },
+      { title: "공간 소개", href: "/interior" },
     ],
   },
   {
