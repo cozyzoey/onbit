@@ -30,7 +30,7 @@ export const NAV_MENU: {
     submenus: [
       { title: "예약 문의", href: "/appointment" },
       { title: "공지 사항", href: "/" },
-      { title: "오시는 길", href: "/" },
+      { title: "오시는 길", href: "/map" },
     ],
   },
 ];

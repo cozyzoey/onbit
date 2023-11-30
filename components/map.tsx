@@ -1,14 +1,18 @@
 "use client";
 
+import clsx from "clsx";
 import Script from "next/script";
-import { useRef } from "react";
+import { ComponentPropsWithoutRef, useCallback, useRef } from "react";
 
 const API_CLIENT_ID = "epdkl0jtmp";
 
-export default function Map() {
+export default function Map({
+  className,
+  ...props
+}: ComponentPropsWithoutRef<"div">) {
   const mapRef = useRef(null);
 
-  const initMap = () => {
+  const initMap = useCallback(() => {
     if (!mapRef.current) return;
 
     const location = new naver.maps.LatLng(37.482476, 126.997236);
@@ -26,12 +30,15 @@ export default function Map() {
 
     new window.naver.maps.Marker({
       position: location,
-      map: map,
+      map,
     });
-  };
+  }, []);
 
   return (
-    <div className="aspect-[7/6] w-full md:aspect-video">
+    <div
+      className={clsx("aspect-[7/6] w-full md:aspect-video", className)}
+      {...props}
+    >
       <Script
         strategy="lazyOnload"
         src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${API_CLIENT_ID}`}

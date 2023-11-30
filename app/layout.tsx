@@ -2,6 +2,7 @@ import "./globals.css";
 
 import clsx from "clsx";
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
@@ -22,10 +23,11 @@ export default function RootLayout({
       lang="ko"
       className={clsx(gothic_a1.variable, east_sea_dokdo.variable)}
     >
-      <body className="bg-stone-50 text-gray-900">
+      <body className="text-gray-900">
         <Header />
         <main className="pt-16 xl:pt-20">{children}</main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

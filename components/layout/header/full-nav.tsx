@@ -41,7 +41,7 @@ export default function FullNav({ visible }: { visible: boolean }) {
           <strong className="font-bold">예약 후 방문</strong> 바랍니다.
         </div>
 
-        <Map />
+        {/* <Map /> */}
       </div>
     </div>
   );

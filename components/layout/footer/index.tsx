@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { HiOutlinePrinter } from "react-icons/hi";
-import { HiOutlinePhone } from "react-icons/hi";
-import { HiOutlineMail } from "react-icons/hi";
-import { HiOutlineMap } from "react-icons/hi";
+import {
+  HiOutlineMail,
+  HiOutlineMap,
+  HiOutlinePhone,
+  HiOutlinePrinter,
+} from "react-icons/hi";
 
 const INFO: { tag: ReactNode; content: string }[] = [
   { tag: <HiOutlinePhone />, content: "02-522-9730" },
@@ -17,7 +19,7 @@ const INFO: { tag: ReactNode; content: string }[] = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-stone-200 px-4 py-8">
+    <footer className="w-full bg-stone-100 px-4 py-8">
       <div className="mx-auto flex max-w-screen-md flex-col items-center gap-4 md:flex-row md:gap-8">
         <div className="w-max">
           <Image
