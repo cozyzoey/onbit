@@ -17,7 +17,7 @@ const INFO: { tag: ReactNode; content: string }[] = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-stone-100 px-4 py-8">
+    <footer className="w-full bg-stone-200 px-4 py-8">
       <div className="mx-auto flex max-w-screen-md flex-col items-center gap-4 md:flex-row md:gap-8">
         <div className="w-max">
           <Image

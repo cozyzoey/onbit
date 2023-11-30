@@ -21,8 +21,8 @@ export const NAV_MENU: {
     submenus: [
       { title: "진료 과목", href: "/treatment" },
       { title: "진료 과정", href: "/process" },
-      { title: "개인 정신 치료", href: "/" },
-      { title: "그룹 정신 치료", href: "/" },
+      { title: "개인 정신 치료", href: "/personal-therapy" },
+      { title: "그룹 정신 치료", href: "/group-therapy" },
     ],
   },
   {
