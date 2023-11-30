@@ -6,7 +6,7 @@ import Hamburger from "./hamburger";
 
 export default function Header() {
   return (
-    <header className="fixed left-0 right-0 top-0">
+    <header className="fixed left-0 right-0 top-0 z-50">
       <nav className="flex h-16 items-center justify-between bg-stone-50 bg-opacity-60 px-4 text-base xl:h-20 xl:px-10 xl:text-lg">
         <h1>
           <Link

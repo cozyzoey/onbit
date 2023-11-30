@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import PageHeading from "@/components/page-heading";
 
-import { TREATMENTS } from "./fixture";
+import { TREATMENTS } from "./fixtures";
 
 export default function TreatmentPage() {
   return (
